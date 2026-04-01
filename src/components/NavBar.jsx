@@ -49,17 +49,27 @@ const NavBar = () => {
 
             {open && (
                 <nav className='lg:hidden border-t border-brand-border bg-brand-surface px-6 py-4 flex flex-col gap-4'>
-                    {links.map(({ to, label }) => (
-                        <NavLink
-                            key={to}
-                            to={to}
-                            end={to === '/'}
-                            className={linkClass}
-                            onClick={() => setOpen(false)}
-                        >
-                            {label}
-                        </NavLink>
-                    ))}
+                    {links.map(({ to, label }) =>
+                        to.startsWith('/#') ? (
+                            <a
+                                key='to'
+                                href='to'
+                                className='text-sm tracking-widest2 uppercase transition-colors duration-200 text-brand-muted hover:text-brand-text'
+                                onClick={() => setOpen(false)}
+                            >
+                                {label}
+                            </a>
+                        ) : (
+                            <NavLink
+                                key={to}
+                                to={to}
+                                end={to === '/'}
+                                className={linkClass}
+                                onClick={() => setOpen(false)}
+                            >
+                                {label}
+                            </NavLink>
+                        ))}
                 </nav>
             )}
         </header>
