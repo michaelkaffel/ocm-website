@@ -1,8 +1,8 @@
 ---
 title: "Satisfy the Beast!"
-slug: "satisfythebeast"
+slug: "satisfy-the-beast"
 date: "Nov 17, 2021"
-category: ""
+category: "lifestyle, evolutionary biology, mental health"
 readTime: "6 min read"
 thumbnail: "https://static.wixstatic.com/media/nsplsh_4270482d2d7570526c4373~mv2_d_1982_2973_s_2.jpg"
 ---

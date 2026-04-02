@@ -2,7 +2,7 @@
 title: "Free costs Focus"
 slug: "free-costs-focus"
 date: "Sep 21, 2021"
-category: ""
+category: "dopamine, lifestyle, ADHD"
 readTime: "4 min read"
 thumbnail: "https://static.wixstatic.com/media/11062b_702aa61483f74d28a8835f37022071af~mv2.jpg"
 ---

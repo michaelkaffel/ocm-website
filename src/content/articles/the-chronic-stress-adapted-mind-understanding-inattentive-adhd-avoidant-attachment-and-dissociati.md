@@ -2,7 +2,7 @@
 title: "The Chronic Stress Adapted Mind: Understanding Inattentive ADHD, Avoidant Attachment, and Dissociation as a Unified Response to Chronic Stress"
 slug: "the-chronic-stress-adapted-mind-understanding-inattentive-adhd-avoidant-attachment-and-dissociati"
 date: "Mar 9, 2026"
-category: ""
+category: "ADHD, attatchment, childhood trauma"
 readTime: "12 min read"
 thumbnail: "https://static.wixstatic.com/media/50feef_1f93e54c2bd140699364fcffebc51cdd~mv2.png"
 ---

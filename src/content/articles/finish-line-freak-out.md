@@ -2,7 +2,7 @@
 title: "Finish line freak out"
 slug: "finish-line-freak-out"
 date: "Sep 1, 2021"
-category: ""
+category: "neuroscience, mindfullness, self-awareness"
 readTime: "4 min read"
 thumbnail: "https://static.wixstatic.com/media/11062b_2774e9d666c84ff59c157e2f26ff326d~mv2.jpg"
 ---

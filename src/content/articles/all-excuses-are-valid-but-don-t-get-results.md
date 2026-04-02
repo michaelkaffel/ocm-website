@@ -2,7 +2,7 @@
 title: "All Excuses are Valid, They Just Don't Get Results--- So, Now What??"
 slug: "all-excuses-are-valid-but-don-t-get-results"
 date: "Sep 26, 2021"
-category: "excuses"
+category: "excuses, self-awareness, vision"
 readTime: "5 min read"
 thumbnail: "https://static.wixstatic.com/media/11062b_83d0d117e4054bcab53dc1ac33aac610~mv2.jpg"
 ---

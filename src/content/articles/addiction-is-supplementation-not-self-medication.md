@@ -2,7 +2,7 @@
 title: "Addiction as Self Supplementation not  Medication"
 slug: "addiction-is-supplementation-not-self-medication"
 date: "Oct 15, 2021"
-category: "addiction"
+category: "addiction, childhood trauma, self medication"
 readTime: "7 min read"
 thumbnail: "https://static.wixstatic.com/media/nsplsh_90ab0637fad644faa2c961ce26ae1338~mv2.jpg"
 ---

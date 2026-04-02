@@ -2,7 +2,7 @@
 title: "Proximal Abandonment- The Modern Mental Health Dilemma"
 slug: "proximal-abandonment-the-modern-mental-health-dilemma"
 date: "Oct 23, 2021"
-category: "mental health"
+category: "mental health, abandonment, childhood trauma"
 readTime: "8 min read"
 thumbnail: "https://static.wixstatic.com/media/nsplsh_bd7a1c488f7d4195873547fbe1e4784e~mv2.jpg"
 ---

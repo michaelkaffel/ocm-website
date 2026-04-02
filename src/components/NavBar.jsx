@@ -2,11 +2,10 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 const links = [
-    { to: '/', label: 'Home' },
-    { to: '/coaching', label: 'Coaching' },
+    { to: '/about', label: 'About' },
     { to: '/#podcast', label: 'Podcast' },
     { to: '/articles', label: 'Articles' },
-    { to: '/about', label: 'About' },
+    { to: '/coaching', label: 'Coaching' },
     { to: '/#contact', label: 'Contact' },
 ]
 

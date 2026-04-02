@@ -2,7 +2,7 @@
 title: "You should WANT to be a crappy Meditator"
 slug: "why-you-might-want-to-be-a-crappy-meditator"
 date: "Dec 26, 2021"
-category: "Mindfulness"
+category: "mindfulness, meditation, mental health"
 readTime: "6 min read"
 thumbnail: "https://static.wixstatic.com/media/11062b_8652cbafe56e445aa66870338829591e~mv2.jpg"
 ---
