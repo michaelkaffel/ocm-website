@@ -2,6 +2,10 @@ import heroImage from '../assets/omc-hero.png';
 import bookCover from '../assets/book.png';
 import podcastArt from '../assets/podcast-graphic.png'
 
+import { getAllArticles } from '../utils/articles';
+
+const latestArticles = getAllArticles().slice(0, 3);
+
 const CALENDLY_URL = 'https://calendly.com/owlmedicine/15min';
 const APPLE_EMBED_URL = 'https://embed.podcasts.apple.com/us/podcast/speak-plainly-podcast/id1594904790';
 const SPOTIFY_URL = 'https://open.spotify.com/show/4BsTYLvSUe6HOrkkMG4BqG';
@@ -48,9 +52,9 @@ const Home = () => {
                     <div className='mt-12 grid gap-12 lg:grid-cols-2 items-start'>
                         {/* ── Left - description + platform badges */}
                         <div className='flex flex-col items-center text-center lg:items-start lg:text-left'>
-                            
+
                             <div className='flex flex-col items-center text-center lg:items-start lg:text-left'>
-                                <img 
+                                <img
                                     src={podcastArt}
                                     alt='Speak Plainly Podcast show art'
                                     className='w-full max-w-sx rounded-lg'
@@ -166,23 +170,35 @@ const Home = () => {
                     </h2>
 
                     <div className='mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3'>
-                        {[1, 2, 3].map((n) => (
+                        {latestArticles.map((article) => (
                             <article
-                                key={n}
-                                className='group rounded-lg bg-brand-surface p-6 transition-transform hover:-translate-y-1'
+                                key={article.slug}
+                                className='group rounded-lg bg-brand-surface overflow-hidden transition-transform hover:-translate-y-1'
                             >
-                                <p className='text-xs uppercase tracking-wider text-brand-accent font-sans'>
-                                    Category
-                                </p>
-                                <h3 className='mt-2 font-heading text-xl text-brand-text'>
-                                    Article Title {n}
-                                </h3>
-                                <p className='mt-3 text-sm leading-relaxed text-brand-text/70 font-sans'>
-                                    Placeholder excerpt for article {n}. Replace with real content once articles are authored
-                                </p>
-                                <span className='mt-4 inline-block text-sm font-semibold text-brand-accent transition-opacity group-hover:opacity-80'>
-                                    Read More →
-                                </span>
+                                {article.thumbnail && (
+                                    <img
+                                        src={article.thumbnail}
+                                        alt={article.title}
+                                        className='h-40 w-full object-cover'
+                                    />
+                                )}
+
+                                <div className='p-6'>
+                                    {article.category && (
+                                        <p className='text-xs uppercase tracking-wider text-brand-accent font-sans'>
+                                        {article.category}
+                                    </p>
+                                    )}
+                                    <h3 className='mt-2 font-heading text-xl text-brand-text'>
+                                        {article.title}
+                                    </h3>
+                                    <p className='mt-3 text-xs text-brand-text/50 font-sans'>
+                                        {article.readTime}
+                                    </p>
+                                    <span className='mt-4 inline-block text-sm font-semibold text-brand-accent transition-opacity group-hover:opacity-80'>
+                                        Read More →
+                                    </span>
+                                </div>
                             </article>
                         ))}
                     </div>
