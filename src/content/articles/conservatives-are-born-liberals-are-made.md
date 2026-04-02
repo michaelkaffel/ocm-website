@@ -2,7 +2,7 @@
 title: "Conservatives are Born Liberals are Made"
 slug: "conservatives-are-born-liberals-are-made"
 date: "Sep 15, 2021"
-category: ""
+category: "neuroscience, evolutionary biology, lifestyle"
 readTime: "5 min read"
 thumbnail: "https://static.wixstatic.com/media/0a8802f2cb234551bc855be44c0f34de.jpg"
 ---

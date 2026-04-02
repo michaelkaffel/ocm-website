@@ -2,7 +2,7 @@
 title: "Pathological Normativity Theory: A New Framework for Understanding Neurodiversity"
 slug: "pathological-normativity-theory-a-new-framework-for-understanding-neurodiversity"
 date: "Mar 22, 2026"
-category: ""
+category: "neurodiversity, mental health, childhood trauma"
 readTime: "10 min read"
 thumbnail: "/images/articles/pathological-normativity.jpg"
 ---

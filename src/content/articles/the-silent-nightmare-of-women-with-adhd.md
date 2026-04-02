@@ -2,7 +2,7 @@
 title: "The Silent Nightmare of Women with ADHD"
 slug: "the-silent-nightmare-of-women-with-adhd"
 date: "Mar 13, 2026"
-category: ""
+category: "adhd, childhood trauma, mental health"
 readTime: "12 min read"
 thumbnail: "https://static.wixstatic.com/media/50feef_aeb2b9cc1ae34a6bba4ffca5846d78e8~mv2.png"
 ---

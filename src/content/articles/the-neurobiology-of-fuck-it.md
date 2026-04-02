@@ -1,8 +1,8 @@
 ---
-title: "The Neurobiology of \"Fuck-it\""
+title: "The Neurobiology of 'Fuck-it'"
 slug: "the-neurobiology-of-fuck-it"
 date: "Sep 13, 2021"
-category: ""
+category: "neuroscience, dopamine, mental health"
 readTime: "5 min read"
 thumbnail: "https://static.wixstatic.com/media/11062b_4d7e9215d20a40159c6f78f78817520e~mv2.jpg"
 ---

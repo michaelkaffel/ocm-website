@@ -2,7 +2,7 @@
 title: "On the Non-linearity of Grief"
 slug: "on-the-non-linearity-of-grief"
 date: "Mar 24, 2026"
-category: ""
+category: "grief, mental health, self-awareness"
 readTime: "6 min read"
 thumbnail: "https://static.wixstatic.com/media/50feef_d0223889a23d4433999bfb7bfa954189~mv2.png"
 ---

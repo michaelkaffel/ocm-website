@@ -1,8 +1,9 @@
+import { Link } from 'react-router-dom';
 import heroImage from '../assets/omc-hero.png';
 import bookCover from '../assets/book.png';
 import podcastArt from '../assets/podcast-graphic.png'
-
 import { getAllArticles } from '../utils/articles';
+import ArticleCard from '../components/ArticleCard';
 
 const latestArticles = getAllArticles().slice(0, 3);
 
@@ -57,7 +58,7 @@ const Home = () => {
                                 <img
                                     src={podcastArt}
                                     alt='Speak Plainly Podcast show art'
-                                    className='w-full max-w-sx rounded-lg'
+                                    className='w-full max-w-xs rounded-lg'
                                 />
                             </div>
 
@@ -169,37 +170,9 @@ const Home = () => {
                         Articles
                     </h2>
 
-                    <div className='mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3'>
+                    <div className='mt-12 grid gap-8 lg:grid-cols-3'>
                         {latestArticles.map((article) => (
-                            <article
-                                key={article.slug}
-                                className='group rounded-lg bg-brand-surface overflow-hidden transition-transform hover:-translate-y-1'
-                            >
-                                {article.thumbnail && (
-                                    <img
-                                        src={article.thumbnail}
-                                        alt={article.title}
-                                        className='h-40 w-full object-cover'
-                                    />
-                                )}
-
-                                <div className='p-6'>
-                                    {article.category && (
-                                        <p className='text-xs uppercase tracking-wider text-brand-accent font-sans'>
-                                        {article.category}
-                                    </p>
-                                    )}
-                                    <h3 className='mt-2 font-heading text-xl text-brand-text'>
-                                        {article.title}
-                                    </h3>
-                                    <p className='mt-3 text-xs text-brand-text/50 font-sans'>
-                                        {article.readTime}
-                                    </p>
-                                    <span className='mt-4 inline-block text-sm font-semibold text-brand-accent transition-opacity group-hover:opacity-80'>
-                                        Read More →
-                                    </span>
-                                </div>
-                            </article>
+                            <ArticleCard key={article.slug} article={article}/>
                         ))}
                     </div>
                 </div>
@@ -276,7 +249,7 @@ const Home = () => {
                     </form>
 
                     {/* Social links */}
-                    <div className='mt-12 flex justify-center gap-6'>
+                    {/* <div className='mt-12 flex justify-center gap-6'>
                         <a
                             href='#'
                             target='_blank'
@@ -310,7 +283,7 @@ const Home = () => {
                                 <path d='M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.546 12 3.546 12 3.546s-7.505 0-9.377.504A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.504 9.376.504 9.376.504s7.505 0 9.377-.504a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814ZM9.545 15.568V8.432L15.818 12l-6.273 3.568Z' />
                             </svg>
                         </a>
-                    </div>
+                    </div> */}
                 </div>
             </section>
         </main>

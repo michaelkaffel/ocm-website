@@ -2,7 +2,7 @@
 title: "Rats who love pain"
 slug: "rats-who-love-pain"
 date: "Sep 4, 2021"
-category: ""
+category: "neuroscience, childhood trauma, attachment"
 readTime: "4 min read"
 thumbnail: "https://static.wixstatic.com/media/11062b_fed48495cb5241b7a59ab9981a0242cf~mv2.jpg"
 ---

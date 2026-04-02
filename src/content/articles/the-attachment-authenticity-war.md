@@ -2,7 +2,7 @@
 title: "The Attachment V Authenticity War"
 slug: "the-attachment-authenticity-war"
 date: "Aug 12, 2021"
-category: ""
+category: "attachment, childhood trauma, mental health"
 readTime: "13 min read"
 thumbnail: "https://static.wixstatic.com/media/11062b_48e258f2eea64a309fe372a2567324e0~mv2.jpg"
 ---
