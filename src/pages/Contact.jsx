@@ -1,2 +1,2 @@
-const Contact = () => <div className="p-8 text-brand-text">Home page</div>
+const Contact = () => <div className="p-8 text-brand-text">Contact page</div>
 export default Contact;
