@@ -1,10 +1,13 @@
-import { Link } from 'react-router-dom';
 import { getAllArticles } from '../utils/articles';
 import ArticleCard from '../components/ArticleCard';
+import usePageTitle from '../hooks/usePageTitle';
 
 const articles = getAllArticles();
 
+
 const Articles = () => {
+    usePageTitle('Articles')
+
     return (
         <main className='bg-brand-bg pt-28 pb-24 px-6'>
             <div className='mx-auto max-w-5xl'>

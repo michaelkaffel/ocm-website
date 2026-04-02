@@ -3,10 +3,13 @@ import ReactMarkdown from 'react-markdown';
 import { getArticleBySlug } from '../utils/articles';
 import ShareButtons from '../components/ShareButtons';
 import RecentPosts from '../components/RecentPosts';
+import usePageTitle from '../hooks/usePageTitle';
 
 const ArticleDetail = () => {
+    
     const { slug } = useParams();
     const article = getArticleBySlug(slug);
+    usePageTitle(article?.title || 'Article Not Found')
 
     if (!article) {
         return (

@@ -5,7 +5,7 @@ import Coaching from './pages/Coaching';
 import Articles from './pages/Articles';
 import ArticleDetail from './pages/ArticleDetail'
 import About from './pages/About';
-import Contact from './pages/Contact';
+
 
 const App = () => (
     <BrowserRouter>
@@ -16,7 +16,6 @@ const App = () => (
                 <Route path='articles' element={<Articles />}/>
                 <Route path='articles/:slug' element={<ArticleDetail />}/>
                 <Route path='about' element={<About />}/>
-                <Route path='contact' element={<Contact />}/>
             </Route>
         </Routes>
     </BrowserRouter>

@@ -4,6 +4,7 @@ import bookCover from '../assets/book.png';
 import podcastArt from '../assets/podcast-graphic.png'
 import { getAllArticles } from '../utils/articles';
 import ArticleCard from '../components/ArticleCard';
+import usePageTitle from '../hooks/usePageTitle';
 
 const latestArticles = getAllArticles().slice(0, 3);
 
@@ -13,6 +14,8 @@ const SPOTIFY_URL = 'https://open.spotify.com/show/4BsTYLvSUe6HOrkkMG4BqG';
 const APPLE_URL = 'https://podcasts.apple.com/us/podcast/speak-plainly-podcast/id1594904790';
 
 const Home = () => {
+    usePageTitle('');
+    
     return (
         <main>
             {/* ── Hero ──────────────────────── */}
