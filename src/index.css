@@ -20,6 +20,11 @@
 
 *, *::before, *::after { box-sizing: border-box }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
