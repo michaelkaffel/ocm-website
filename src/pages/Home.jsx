@@ -1,9 +1,12 @@
+import { useRef, useState } from 'react';
 import heroImage from '../assets/omc-hero.png';
 import bookCover from '../assets/book.png';
 import podcastArt from '../assets/podcast-graphic.png'
 import { getAllArticles } from '../utils/articles';
 import ArticleCard from '../components/ArticleCard';
 import usePageTitle from '../hooks/usePageTitle';
+import emailjs from '@emailjs/browser'
+
 
 const latestArticles = getAllArticles().slice(0, 3);
 
@@ -14,6 +17,28 @@ const APPLE_URL = 'https://podcasts.apple.com/us/podcast/speak-plainly-podcast/i
 
 const Home = () => {
     usePageTitle('');
+
+    const formRef = useRef(null);
+    const [status, setStatus] = useState('idle') // 'idle' | 'sending' | 'success' | 'error'
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setStatus('sending');
+
+        try {
+            await emailjs.sendForm(
+                import.meta.env.VITE_EMAILJS_OCM_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_OCM_TEMPLATE_ID,
+                formRef.current,
+                { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY}
+            );
+            setStatus('success');
+            formRef.current.reset();
+        } catch (err) {
+            console.error('EmailJS error:', err);
+            setStatus('error');
+        }
+    };
     
     return (
         <main>
@@ -201,8 +226,9 @@ const Home = () => {
                     </h2>
 
                     <form
+                        ref={formRef}
                         className='mt-12 flex flex-col gap-5'
-                        onSubmit={(e) => e.preventDefault()}
+                        onSubmit={handleSubmit}
                     >
                         <label className='flex flex-col gap-1'>
                             <span className='text-sm uppercase tracking-wider text-brand-text/60 font-sans'>
@@ -210,7 +236,7 @@ const Home = () => {
                             </span>
                             <input
                                 type='text'
-                                name='name'
+                                name='from_name'
                                 required
                                 className='rounded border border-brand-text/20 bg-brand-surface px-4 py-3 text-brand-text font-sans placeholder:text-brand-text/30 focus:border-brand-accent focus:outline-none'
                             />
@@ -244,10 +270,22 @@ const Home = () => {
 
                         <button
                             type='submit'
+                            disabled={status === 'sending'}
                             className='mt-2 self-start rounded bg-brand-accent px-8 py-3 text-sm font-semibold uppercase tracking-wider text-brand-text transition-opacity hover:opacity-90'
                         >
-                            Send Message
+                            {status === 'sending' ? 'Sending...' : 'Send Message'}
                         </button>
+
+                        {status === 'success' && (
+                            <p className='text-sm text-green-400 font-sans'>
+                                Message sent! I&rsquo;ll be in touch soon.
+                            </p>
+                        )}
+                        {status === 'error' && (
+                            <p className='text-sm text-red-400 font-sans'>
+                                Something went wrong. Please try again later
+                            </p>
+                        )}
                     </form>
 
                     {/* Social links */}
