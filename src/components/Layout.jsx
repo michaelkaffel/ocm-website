@@ -12,7 +12,7 @@ const ScrollToTop = () => {
                 const el = document.getElementById(hash.replace('#', ''));
                 
                 if (el) {
-                    el.scrollIntoView({ bahavior: 'smooth'});
+                    el.scrollIntoView({ behavior: 'smooth'});
                 }
             }, 100)
         } else {

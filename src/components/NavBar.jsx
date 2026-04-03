@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 const links = [
     { to: '/about', label: 'About' },
@@ -10,17 +10,23 @@ const links = [
 ]
 
 const NavBar = () => {
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(false);
+    const location = useLocation();
+    const navigate = useNavigate();
+    const currentPath = location.pathname + location.hash;
 
-    const navLinkClass = ({ isActive }) =>
-        `text-xs tracking-widest2 uppercase transition-colors duration-200 ${isActive ? 'text-brand-accent' : 'text-brand-muted hover:text-brand-text'
-        }`
+    const baseDesktop = 'text-xs tracking-widest2 uppercase transition-colors duration-200';
+    const baseMobile = 'text-sm tracking-widest2 uppercase transition-colors duration-200';
+    const active = 'text-brand-accent';
+    const inactive = 'text-brand-muted hover:text-brand-text';
 
-    const anchorClass = 
-    'text-xs tracking-widest2 uppercase transition-colors duration-200 text-brand-muted hover:text-brand-text'
+    const desktopNavLinkClass = ({ isActive }) => 
+        `${baseDesktop} ${isActive ? active : inactive}`
 
-    const mobileAnchorClass = 
-    'text-sm tracking-widest2 uppercase transition-colors duration-200 text-brand-muted hover:text-brand-text'
+    const mobileNavLinkClass = ({ isActive }) => 
+        `${baseMobile} ${isActive ? active : inactive}`
+
+    const isAnchorActive = (href) => currentPath === href;
 
     return (
         <header className='fixed top-0 left-0 right-0 z-50 bg-brand-bg border-b border-brand-border'>
@@ -41,19 +47,19 @@ const NavBar = () => {
                 <nav className='hidden lg:flex items-center gap-8'>
                     {links.map(({ to, label }) => 
                         to.startsWith('/#') ? (
-                            <a
+                            <button
                                 key={to}
-                                href={to}
-                                className={anchorClass}
+                                onClick={() => navigate(to)}
+                                className={`text-left ${baseDesktop} ${isAnchorActive(to) ? active : inactive}`}
                             >
                                 {label}
-                            </a>
+                            </button>
                     ) : (
                         <NavLink 
                             key={to} 
                             to={to} 
                             end={to === '/'} 
-                            className={navLinkClass}
+                            className={desktopNavLinkClass}
                         >
                             {label}
                         </NavLink>
@@ -78,20 +84,19 @@ const NavBar = () => {
                 <nav className='lg:hidden border-t border-brand-border bg-brand-surface px-6 py-4 flex flex-col gap-4'>
                     {links.map(({ to, label }) =>
                         to.startsWith('/#') ? (
-                            <a
+                            <button
                                 key={to}
-                                href={to}
-                                className={mobileAnchorClass}
-                                onClick={() => setOpen(false)}
+                                onClick={() => { navigate(to); setOpen(false); }}
+                                className={`text-left ${baseMobile} ${isAnchorActive(to) ? active : inactive}`}
                             >
                                 {label}
-                            </a>
+                            </button>
                         ) : (
                             <NavLink
                                 key={to}
                                 to={to}
                                 end={to === '/'}
-                                className={navLinkClass}
+                                className={mobileNavLinkClass}
                                 onClick={() => setOpen(false)}
                             >
                                 {label}
