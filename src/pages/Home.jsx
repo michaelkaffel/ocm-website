@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import heroImage from '../assets/omc-hero.png';
 import bookCover from '../assets/book.png';
 import podcastArt from '../assets/podcast-graphic.png'
