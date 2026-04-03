@@ -32,7 +32,7 @@ const Footer = () => (
                     </svg>
                 </a>
                 <a
-                    href='#'
+                    href='https://www.youtube.com/@OwlCMedicine'
                     target='_blank'
                     rel='noopener noreferrer'
                     aria-label='Youtube'

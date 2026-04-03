@@ -73,7 +73,7 @@ const Home = () => {
                 id='podcast' className='py-24 px-6 bg-brand-surface'
             >
                 <div className='mx-auto max-w-5xl'>
-                    <h2 className='font-heading text-4xl text-center text-brand-text'>
+                    <h2 className='font-heading uppercase text-4xl text-center text-brand-text'>
                         Podcast
                     </h2>
 
@@ -90,7 +90,7 @@ const Home = () => {
                             </div>
 
                             <p className='mt-6 max-w-md text-lg leading-relaxed text-brand-text/80 font-sans'>
-                                Placeholder podcast description — replace with the clients&apos;s show tagline and summary
+                                A no nonsense approach to mental, physical, and relational health is exactly what you didn't know you need. Listen in for ideas worth chewing on and science based tools for living life after trauma.
                             </p>
 
                             <p className='mt-8 text-sm uppercase tracking-[0.2em] text-brand-accent font-sans font-semibold'>
@@ -140,7 +140,7 @@ const Home = () => {
             {/* ── Book ──────────────────────── */}
             <section id='book' className='py-24 px-6 bg-brand-bg'>
                 <div className='mx-auto max-w-5xl'>
-                    <h2 className='font-heading text-4xl text-center text-brand-text'>
+                    <h2 className='font-heading text-4xl text-center uppercase text-brand-text'>
                         Rethinking Broken
                     </h2>
 
@@ -152,8 +152,7 @@ const Home = () => {
                         />
                         <div className='max-w-md text-center lg:text-left'>
                             <p className='text-lg leading-relaxed text-brand-text/80 font-sans'>
-                                Placeholder description of <em>Rethinking Broken</em> — replace
-                                with the book summary or pull quote.
+                                The strategies we depend on, to survive stress-filled childhoods change us on a biological level. As a result, we developed some hard-won skills, that we ought to use to our advantage. 
                             </p>
                             <a
                                 href='https://rethinkingbroken.com'
@@ -171,12 +170,10 @@ const Home = () => {
             {/* ── Coaching ──────────────────────── */}
             <section id='coaching' className='py-24 px-6 bg-brand-surface'>
                 <div className='mx-auto max-w-3xl text-center'>
-                    <h2 className='font-heading text-4xl text-brand-text'>Coaching</h2>
+                    <h2 className='font-heading text-4xl uppercase text-brand-text'>Coaching</h2>
 
                     <p className='mt-6 text-lg leading-relaxed text-brand-text/80 font-sans'>
-                        Placeholder coaching offer summary — replace with the client&apos;s
-                        description of their coaching services, who they help, and what
-                        transformation looks like.
+                        I use my extensive and diverse background to show people that the natural state of the human body is health. Let me be a partner on your health journey.
                     </p>
 
                     <a
@@ -193,7 +190,7 @@ const Home = () => {
             {/* ── Articles ──────────────────────── */}
             <section id='articles' className='py-24 px-6 bg-brand-bg'>
                 <div className='mx-auto max-w-5xl'>
-                    <h2 className='font-heading text-4xl text-center text-brand-text'>
+                    <h2 className='font-heading text-4xl uppercase text-center text-brand-text'>
                         Articles
                     </h2>
 
@@ -208,12 +205,10 @@ const Home = () => {
             {/* ── About ──────────────────────── */}
             <section id='about' className='py-24 px-6 bg-brand-surface'>
                 <div className='mx-auto max-w-3xl text-center'>
-                    <h2 className='font-heading text-4xl text-brand-text'>About</h2>
+                    <h2 className='font-heading uppercase text-4xl text-brand-text'>About</h2>
 
                     <p className='mt-6 text-lg leading-relaxed text-brand-text/80 font-sans'>
-                        Placeholder bio blurb — replace with the client&apos;s short
-                        biography, background, credentials, and personal story. Two to three
-                        paragraphs works well here.
+                        I'm Owl — coach, author, health educator, podcast host, and integrative medicine enthusiast. I help people reach health physically, mentally, and emotionally. Helping others cultivate and restore joy through health is my passion.
                     </p>
                 </div>
             </section>
@@ -221,7 +216,7 @@ const Home = () => {
             {/* ── Contact ──────────────────────── */}
             <section id='contact' className='py-24 px-6 bg-brand-bg'>
                 <div className='mx-auto max-w-xl'>
-                    <h2 className='font-heading text-4xl text-center text-brand-text'>
+                    <h2 className='font-heading text-4xl text-center uppercase text-brand-text'>
                         Contact
                     </h2>
 
