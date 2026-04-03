@@ -7,7 +7,7 @@ const About = () => {
     return (
         <main className='min-h-screen bg-brand-bg text-brand-text'>
             {/* ── Bio ── */}
-            <section className='px-6 pt-32 pb-20 md:pt-40 md:pb-28 max-w-5xl mx-auto'>
+            <section className='px-6 pt-16 pb-20 md:pt-20 md:pb-28 max-w-5xl mx-auto'>
                 <div className='flex flex-col gap-12 lg:flex-row lg:items-start lg:gap-16'>
 
                     {/* Left — portrait */}
