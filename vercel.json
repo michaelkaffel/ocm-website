@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    { "source": "/aboutme",       "destination": "/about",    "permanent": true },
+    { "source": "/contact",       "destination": "/#contact", "permanent": true },
+    { "source": "/plans-pricing", "destination": "/coaching", "permanent": true },
+    { "source": "/general-9",     "destination": "/",         "permanent": true },
+
+    { "source": "/post/:slug",               "destination": "/articles/:slug", "permanent": true },
+    { "source": "/podcast/episode/:id/:slug","destination": "/podcast/:slug",  "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

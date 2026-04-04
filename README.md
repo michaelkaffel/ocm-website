@@ -21,7 +21,7 @@ The existing Wix site had outgrown what the platform could offer — limited lay
 - **Scheduling:** Calendly (external redirect)
 - **Deployment:** Vercel (auto-deploy on push to `main`)
 
-No backend. The podcast section pulls from an RSS feed client-side, articles are stored as static markdown files loaded at build time via `import.meta.glob`, and scheduling is handled via Calendly link — no server required.
+No traditional backend. Articles are stored as static markdown files loaded at build time via `import.meta.glob`, and scheduling is handled via Calendly link. Podcast data is served through lightweight Vercel Edge Functions that proxy the Buzzsprout RSS feed and cache responses at the CDN layer.
 
 ---
 
@@ -44,6 +44,36 @@ Crawlers don't execute JavaScript, so every route was returning the same generic
 ### Navigation
 The navbar supports six routes with a responsive hamburger menu below the `lg` breakpoint. Hash links (Podcast, Contact) and route links (About, Articles, Coaching) are unified behind shared class constants and active-state logic. Hash link navigation is handled via `useNavigate` to keep all routing within React Router, working in tandem with a `ScrollToTop` component that handles both scroll-to-top on route changes and smooth hash-anchor scrolling.
 
+### Podcast
+The Speak Plainly Podcast is fully integrated with episode listing and detail pages powered by the Buzzsprout RSS feed — no API token required. Three Vercel Edge Functions handle data fetching and CORS proxying, with CDN-level caching (1 hour for the feed, 24 hours for transcripts and chapters):
+
+- `api/podcast-feed.js` — Fetches and parses the RSS XML via `fast-xml-parser` (the Edge runtime has no `DOMParser`) and returns a normalized JSON array of episode objects
+- `api/transcript.js` — Proxies per-episode transcript JSON from Buzzsprout's CDN
+- `api/chapters.js` — Proxies per-episode chapters JSON from Buzzsprout's CDN
+
+The listing page (`/podcast`) includes title/summary search filtering, a skeleton loading state, and a "Latest" badge on the most recent episode. The detail page (`/podcast/:slug`) displays the Buzzsprout embedded player alongside tabbed content — Show Notes, Chapters, and Transcript — each tab lazy-loading its data on first click. Transcript segments are grouped by consecutive speaker before rendering. Show notes are rendered from Buzzsprout's trusted HTML with `<a>` tags patched to open in a new tab. A module-level cache in `usePodcastFeed` means subsequent mounts skip the network request entirely.
+
+> **Note:** Local development requires `vercel dev` rather than `vite dev` — Edge Functions don't run under Vite's dev server.
+
+Each episode is normalized from RSS into the following shape:
+
+```json
+{
+  "id": "18876900",
+  "title": "...",
+  "summary": "...",
+  "showNotes": "<p>HTML string</p>",
+  "publishedAt": "Mon, 30 Mar 2026 00:00:00 -0400",
+  "duration": 2412,
+  "season": 5,
+  "episode": null,
+  "audioUrl": "https://...",
+  "artworkUrl": "https://storage.buzzsprout.com/...",
+  "transcriptUrl": "https://www.buzzsprout.com/.../transcript.json",
+  "chaptersUrl": "https://www.buzzsprout.com/.../chapters.json"
+}
+```
+
 ### Design System
 All brand colors and typography are defined as CSS custom properties in `:root`. Tailwind reads from those variables, meaning the full palette can be swapped by editing a single block in `index.css` — useful for a client whose branding may still evolve. Headings use Cormorant Garamond; body text uses Inter.
 
@@ -58,6 +88,8 @@ All brand colors and typography are defined as CSS custom properties in `:root`.
 | `/about` | Personal bio consolidated from scattered Wix content |
 | `/articles` | Article listing with category tags and read time |
 | `/articles/:slug` | Article detail with markdown rendering and social share |
+| `/podcast` | Episode listing with search filtering and skeleton loading |
+| `/podcast/:slug` | Episode detail with embedded player and tabbed Show Notes / Chapters / Transcript |
 | `/contact` | Contact form wired to EmailJS |
 
 ---
@@ -66,8 +98,11 @@ All brand colors and typography are defined as CSS custom properties in `:root`.
 
 ```bash
 npm install
-npm run dev
+npm run dev       # standard development (Vite dev server)
+vercel dev        # only needed when testing Edge Functions locally
 ```
+
+> **Note:** The catch-all SPA rewrite in `vercel.json` interferes with Vite's dynamic asset serving in `vercel dev`. Use `npm run dev` for everyday development and reserve `vercel dev` for when you need the podcast API routes (`/api/podcast-feed`, `/api/transcript`, `/api/chapters`) to run locally.
 
 Requires a `.env` file with EmailJS credentials:
 
