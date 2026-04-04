@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { formatDuration, formatDate } from '../hooks/usePodcastFeed';
+import { toSlug } from '../utils/podcast';
 
 const EpisodeRow = ({ episode, isLatest }) => {
     const navigate = useNavigate();
@@ -14,7 +15,7 @@ const EpisodeRow = ({ episode, isLatest }) => {
 
     return (
         <button
-            onClick={() => navigate(`/podcast/${episode.id}`)}
+            onClick={() => navigate(`/podcast/${toSlug(episode.title)}`)}
             className='w-full text-left flex gap-5 py-6 border-b border-white/10
                         hover:bg-white/5 transition-colors duration-150 px-3 -mx-3 rounded-lg'   
         >

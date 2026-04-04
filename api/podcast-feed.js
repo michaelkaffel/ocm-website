@@ -28,6 +28,7 @@ export default async function handler() {
         const feed = parser.parse(xml)
         const channel = feed.rss.channel
         const items = channel.item ?? [];
+        
 
         // Channel-level artwork (shared across all episodes)
         const channelArtwork =
@@ -38,7 +39,7 @@ export default async function handler() {
         const episodes = items.map(item => {
 
             const rawGuid = typeof item.guid === 'object' ? item.guid['#text'] : item.guid ?? '';
-            const id = String(rawGuid).replace('Buzzsprout', '');
+            const id = String(rawGuid).replace('Buzzsprout', '').replace(/^-/, '');
 
             return {
                 id,
@@ -51,8 +52,18 @@ export default async function handler() {
                 episode: item['itunes:episode'] ?? null,
                 audioUrl: item.enclosure?.['@_url'] ?? '',
                 artworkUrl: channelArtwork,
-                transcriptUrl: item['podcast:transcript']?.['@_url'] ?? '',
-                chaptersUrl: item['podcast:chapters']?.['@_url'] ?? '',
+                transcriptUrl: (() => {
+                    const t = item['podcast:transcript'] ?? [];
+                    return Array.isArray(t)
+                        ? (t.find(x => x['@_type'] == 'application/json')?.['@_url'] ?? '')
+                        : (t['@_url'] ?? '')
+                })(),
+                chaptersUrl: (() => {
+                    const c = item['podcast:chapters'] ?? [];
+                    return Array.isArray(c)
+                        ? (c.find(x => x['@_type'] === 'application/json+chapters')?.['@_url'] ?? '')
+                        : (c['@_url'] ?? '')
+                })(),
             }
         })
 

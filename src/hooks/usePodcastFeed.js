@@ -1,4 +1,6 @@
-import {useState, useEffect } from 'react'
+import {useState, useEffect } from 'react';
+
+let cache = null;
 
 const formatDuration = (totalSeconds) => {
     if (!totalSeconds) return '';
@@ -15,16 +17,20 @@ const formatDate = (pubDate) => {
 };
 
 const usePodcastFeed = () => {
-    const [episodes, setEpisodes] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [episodes, setEpisodes] = useState(cache ?? []);
+    const [loading, setLoading] = useState(!cache);
     const [error, setError] = useState(null);
 
     useEffect(() => {
+
+        if (cache) return;
+
         const fetchEpisodes = async () => {
             try {
                 const r = await fetch('/api/podcast-feed')
                 if (!r.ok) throw new Error(`Feed fetch failed: ${r.status}`);
-                const data = await r.json()
+                const data = await r.json();
+                cache = data;
                 setEpisodes(data);
             } catch (err) {
                 setError(err);
