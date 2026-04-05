@@ -9,6 +9,6 @@
     { "source": "/podcast/episode/:id/:slug","destination": "/podcast/:slug",  "permanent": true }
   ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/((?!assets/|api/|src/|@|node_modules/)[^.]*)", "destination": "/index.html" }
   ]
 }
