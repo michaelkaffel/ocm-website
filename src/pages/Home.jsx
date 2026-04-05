@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import heroImage from '../assets/omc-hero.png';
 import bookCover from '../assets/book.png';
 import podcastArt from '../assets/podcast-graphic.png'
@@ -77,9 +78,9 @@ const Home = () => {
                         Podcast
                     </h2>
 
-                    <div className='mt-12 grid gap-12 lg:grid-cols-2 items-start'>
+                    <div className='mt-12 grid gap-12 lg:grid-cols-2 items-center'>
                         {/* ── Left - description + platform badges */}
-                        <div className='flex flex-col items-center text-center lg:items-start lg:text-left'>
+                        <div className='flex flex-col items-center text-center lg:items-start lg:text-left lg:justify-self-start'>
 
                             <div className='flex flex-col items-center text-center lg:items-start lg:text-left'>
                                 <img
@@ -124,7 +125,13 @@ const Home = () => {
                         </div>
 
                         {/* Right — Apple Podcasts Embed */}
-                        <div className='flex justify-center lg:justify-end'>
+                        <div className='flex flex-col items-center lg:justify-self-end'>
+                            <Link
+                                to='/podcast'
+                                className='text-sm mb-6 text-center uppercase tracking-[0.2em] text-brand-accent font-sans font-semibold'
+                            >
+                                See All Episodes
+                            </Link>
                             <iframe
                                 src={APPLE_EMBED_URL}
                                 allow='autoplay *; encrypted-media *; fullscreen *; clipboard-write'
