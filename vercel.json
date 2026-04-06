@@ -6,7 +6,8 @@
     { "source": "/general-9",     "destination": "/",         "permanent": true },
 
     { "source": "/post/:slug",               "destination": "/articles/:slug", "permanent": true },
-    { "source": "/podcast/episode/:id/:slug","destination": "/podcast/:slug",  "permanent": true }
+    { "source": "/podcast/episode/:id/:slug","destination": "/podcast/:slug",  "permanent": true },
+    { "source": "/articles/categories/:slug","destination": "/articles",  "permanent": true }
   ],
   "rewrites": [
     { "source": "/((?!assets/|api/|src/|@|node_modules/)[^.]*)", "destination": "/index.html" }
