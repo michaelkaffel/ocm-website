@@ -239,6 +239,7 @@ const Home = () => {
                             <input
                                 type='text'
                                 name='from_name'
+                                placeholder='Your name'
                                 required
                                 className='rounded border border-brand-text/20 bg-brand-surface px-4 py-3 text-brand-text font-sans placeholder:text-brand-text/30 focus:border-brand-accent focus:outline-none'
                             />
@@ -253,7 +254,7 @@ const Home = () => {
                                 name='email'
                                 required
                                 className='rounded border border-brand-text/20 bg-brand-surface px-4 py-3 text-brand-text font-sans placeholder:text-brand-text/30 focus:border-brand-accent focus:outline-none'
-                                placeholder='you@email.com'
+                                placeholder='your@email.com'
                             />
                         </label>
 
@@ -266,7 +267,7 @@ const Home = () => {
                                 rows={5}
                                 required
                                 className='rounded border border-brand-text/20 bg-brand-surface px-4 py-3 text-brand-text font-sans placeholder:text-brand-text/30 focus:border-brand-accent focus:outline-none resize-y'
-                                placeholder='How can i help?'
+                                placeholder='Message us your questions, comments, ideas for collaboration, or anything else.'
                             />
                         </label>
 
