@@ -102,7 +102,7 @@ const Coaching = () => {
                     </h2>
 
                     <p className='font-sans text-lg leading-relaxed mb-10'>
-                        Book your free 15-minute call to see if Owl is the right coach for you.
+                        See if Owl Medicine is right for you
                     </p>
 
                     <a
