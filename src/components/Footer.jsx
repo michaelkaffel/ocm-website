@@ -44,9 +44,23 @@ const Footer = () => (
                 </a>
             </div>
 
-            <p className='text-brand-faint text-xs tracking-wide'>
-                © {new Date().getFullYear()} Owl Chrysalis Medicine
-            </p>
+            <div className='flex flex-col text-brand-faint text-center text-xs md:text-right'>
+                <p className=' tracking-wide'>
+                    © {new Date().getFullYear()} Owl Chrysalis Medicine
+                </p>
+                <p className='ml-2'>
+                    Built by{' '}
+                    <a
+                        href='https://michaelkaffel.com'
+                        target='_blank' rel='noreferrer'
+                        className='hover:text-brand-accent underline'
+                    >
+                        Michael Kaffel
+                    </a>
+                </p>
+            </div>
+
+
         </div>
     </footer>
 )
