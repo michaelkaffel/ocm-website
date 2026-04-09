@@ -17,9 +17,7 @@ const Coaching = () => {
                     </h1>
 
                     <p className='mt-6 max-w-lg text-lg leading-relaxed text-brand-text/80 font-sans'>
-                        I use my extensive and diverse background to show people that the
-                        natural state of the human body is health. Let me be a partner on your
-                        health journey.
+                        Making & tolerating change can be hard and help is sometimes necessary.
                     </p>
                 </div>
 

@@ -55,7 +55,7 @@ const Home = () => {
                         Medicine
                     </h1>
                     <p className='mt-6 max-w-lg text-lg leading-relaxed text-brand-text/80 font-sans'>
-                        Guiding you through deep transformation — body, mind, and spirit.
+                        MUSIC & MEDICINE
                     </p>
                 </div>
 
@@ -91,7 +91,7 @@ const Home = () => {
                             </div>
 
                             <p className='mt-6 max-w-md text-lg leading-relaxed text-brand-text/80 font-sans'>
-                                A no nonsense approach to mental, physical, and relational health is exactly what you didn't know you need. Listen in for ideas worth chewing on and science based tools for living life after trauma.
+                                Ideas worth chewing on for a no-nonsense approach to life, from international trauma educator, Owl C Medicine
                             </p>
 
                             <p className='mt-8 text-sm uppercase tracking-[0.2em] text-brand-accent font-sans font-semibold'>
@@ -159,7 +159,7 @@ const Home = () => {
                         />
                         <div className='max-w-md text-center lg:text-left'>
                             <p className='text-lg leading-relaxed text-brand-text/80 font-sans'>
-                                The strategies we depend on, to survive stress-filled childhoods change us on a biological level. As a result, we developed some hard-won skills, that we ought to use to our advantage. 
+                                <em>Rethinking Broken</em>, by two-time Amazon best-selling author Owl C Medicine, challenges the idea that anyone is “broken.” What looks like dysfunction to you, is <span className='italic'>always</span> a set of strategies built to survive stress— the same stress response strategies that made sense then, still carry power now. Instead of flaws to erase, these adaptations can be understood, predicted, and used as hardest-won, irreplaceable life skills.
                             </p>
                             <a
                                 href='https://rethinkingbroken.com'
@@ -215,8 +215,9 @@ const Home = () => {
                     <h2 className='font-heading uppercase text-4xl text-brand-text'>About</h2>
 
                     <p className='mt-6 text-lg leading-relaxed text-brand-text/80 font-sans'>
-                        I'm Owl — coach, author, health educator, podcast host, and integrative medicine enthusiast. I help people reach health physically, mentally, and emotionally. Helping others cultivate and restore joy through health is my passion.
+                        I'm Owl — coach, author, health educator and musician. <br />I integrate the intolerable to achieve the impossible.
                     </p>
+                    
                 </div>
             </section>
 
