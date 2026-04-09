@@ -22,7 +22,7 @@ const Coaching = () => {
                 </div>
 
                 <div className='mt-auto flex items-end justify-center lg:bottom-0 lg:right-0 lg:h-full lg:w-1/2 lg:justify-end'>
-                    <img 
+                    <img
                         src={coachingHero}
                         alt='Coaching with Owl Chrysalis Medicine'
                         className='h-auto w-full max-w-md lg:max-w-lg lg:h-[90%] object-contain object-bottom'
@@ -31,104 +31,78 @@ const Coaching = () => {
 
             </section>
 
-            {/* ── What I Can Do For You ── */}
+            {/* ── What coaching is ── */}
             <section className='px-6 py-16 md:py-20 max-w-3xl mx-auto'>
                 <h2 className='font-heading text-3xl md:text-4xl text-brand-accent mb-6'>
-                    What I Can Do for You
+                    What Coaching Is
                 </h2>
 
                 <p className='font-sans text-lg leading-relaxed mb-6'>
-                    My specialty as a health coach is finding alternative, minimally
-                    invasive and creative ways to accomplish the goals you and your
-                    provider have agreed to be best for you.
+                    Weekly one-on-one video sessions aimed at changing patterns in real time. Not advice, not therapy, not venting—it's identifying what's happening in your system and actively shifting how you respond.
                 </p>
 
-                <p className='font-sans text-lg leading-relaxed mb-6'>
-                    I use my 13 years of diverse experience, knowledge and expertise to
-                    help you pick a path that will work best for you to achieve your health
-                    goals and beyond.
-                </p>
-
-                <p className='font-sans text-lg leading-relaxed mb-6'>
-                    Whether you want to recover from a surgery, prevent a surgery, lose
-                    weight, control pre-diabetes or build physical therapy programs after
-                    insurance cuts you off &mdash; let me help you achieve your health
-                    goals.
-                </p>
             </section>
 
-            {/* ── What Is a Health Coach? ── */}
-            <section className='px-6 py-16 md:py-20 max-w-3xl mx-auto'>
-                <h2 className='font-heading text-3xl md:text-4xl text-brand-accent mb-6'>
-                    What Is a Health Coach
+            {/* ── As a coach ── */}
+            <section className='px-6 py-16 md:py-20 bg-brand-surface'>
+                <div className='max-w-3xl mx-auto'>
+                    <h2 className='font-heading text-3xl md:text-4xl text-brand-accent mb-6'>
+                    As a Coach
                 </h2>
-
                 <p className='font-sans text-lg leading-relaxed mb-6'>
-                    A health coach fills in the gaps between what happens at the
-                    doctor&rsquo;s office and real life. Think of your coach as a partner
-                    for your health. We help clients find practical ways to achieve the
-                    goals you&rsquo;ve created with your provider.
+                    Most people already know what they need to do. They just can't make themselves do it. I fix that bit.
                 </p>
 
                 <h3 className='font-heading text-2xl md:text-3xl text-brand-accent mb-4'>
-                    Who Hires Coaches?
+                    Trauma Coaching
                 </h3>
-
-                <p className='font-sans text-lg leading-relaxed'>
-                    Everybody does! I&rsquo;ve helped everyone from personal trainers to
-                    corporate executives, flight attendants, photographers, private
-                    contractors, auto-mechanics, retirees, single parents and hopefully
-                    you lead healthier lives.
-                </p>
-            </section>
-
-            {/* ── Why I Became a Coach ── */}
-            <section className='px-6 py-16 md:py-20 max-w-3xl mx-auto'>
-                <h2 className='font-heading text-3xl md:text-4xl text-brand-accent mb-6'>
-                    Why I Became a Coach
-                </h2>
-
                 <p className='font-sans text-lg leading-relaxed mb-6'>
-                    Doctor visits are getting shorter and shorter, leaving less and less
-                    time for providers to explain hospital policies, procedures, standards
-                    of practice, alternative options or the logic behind any of these
-                    things. That&rsquo;s where a coach comes in.
+                    Childhood experiences form the foundation of our nervous systems including how we respond to stress, threats and even joy. They set up our baselines for our expectations, how we give and receive love and our personalities. Some childhoods set up expectations of pain, abuse, fear and neglect everywhere we turn. We fix that too.
                 </p>
 
-                <p className='font-sans text-lg leading-relaxed'>
-                    As a coach, I take the time to explain what your provider may have left
-                    out, skipped over or just not had time to explain &mdash; so you can
-                    make informed decisions for yourself. I often play medical jargon
-                    translator and patient advocate.
+                <h3 className='font-heading text-2xl md:text-3xl text-brand-accent mb-4'>
+                    Neuroplastic Coaching
+                </h3>
+                <p className='font-sans text-lg leading-relaxed mb-2'>
+                    Neuroplastic symptoms are physical sensations—most commonly chronic pain, fatigue, or tingling—generated by the conditioning of the brain and nervous system, rather than structural damage or tissue injury.
                 </p>
+                <p className='font-sans text-lg leading-relaxed'>
+                    They occur when neural pathways become reinforced by stress, fear, or habitual focus, effectively "learning" to produce pain. These symptoms are often reversible through neuroplastic work.
+                </p>
+                </div>
+                
+
             </section>
 
-            {/* ── What I Help Clients Do ── */}
+            {/* ── Common symptoms ── */}
             <section className='px-6 py-16 md:py-20 max-w-3xl mx-auto'>
                 <h2 className='font-heading text-3xl md:text-4xl text-brand-accent mb-6'>
-                    What I Help Clients Do
+                    Common Neuroplastic Symptoms and Conditions
                 </h2>
 
-                <p className='font-sans text-lg leading-relaxed'>
-                    I&rsquo;ve helped clients prep for gastric sleeve surgery, pursue safe
-                    medical tourism for affordable care abroad, learn to cope with their
-                    ADHD, control type 2 diabetes, avoid &ldquo;unavoidable&rdquo;
-                    surgeries and seek out second and third opinions.
+                <ul className='font-sans leading-relaxed space-y-3 mt-6'>
+                    <li><span className='font-heading text-lg font-semibold text-brand-accent'>Chronic Pain</span> — chronic back, neck, or pelvic pain</li>
+                    <li><span className='font-heading text-lg font-semibold text-brand-accent'>Fibromyalgia &amp; Fatigue</span> — widespread pain and fatigue</li>
+                    <li><span className='font-heading text-lg font-semibold text-brand-accent'>Headaches &amp; Migraines</span> — chronic head pain</li>
+                    <li><span className='font-heading text-lg font-semibold text-brand-accent'>Gastrointestinal Issues</span> — irritable bowel syndrome (IBS)</li>
+                    <li><span className='font-heading text-lg font-semibold text-brand-accent'>Sensory Sensations</span> — tingling, numbness, burning, electric shocks, or sensations of heat/cold</li>
+                    <li><span className='font-heading text-lg font-semibold text-brand-accent'>Dizziness &amp; Spasms</span> — attacks of dizziness, vomiting, or muscle spasms</li>
+                </ul>
+
+                <p className='font-sans text-right text-lg leading-relaxed mt-8 italic text-brand-text/70'>
+                    &ldquo;Re-program the parts that learned to cause pain.&rdquo;
                 </p>
             </section>
 
             {/* ── CTA ── */}
-            <section className='px-6 py-20 md:py-28 max-w-3xl mx-auto text-center'>
-                <h2 className='font-heading text-3xl md:text-4xl text-brand-accent mb-6'>
-                    I Can Help You
+            <section className='px-6 py-20 md:py-28 text-center bg-brand-border'>
+                <div className='max-w-3xl mx-auto'>
+                    <h2 className='font-heading text-3xl md:text-4xl text-brand-accent mb-6'>
+                    Set Up A Session
                 </h2>
 
                 <p className='font-sans text-lg leading-relaxed mb-10'>
-                    If you want an experienced medical professional you can trust by your
-                    side every step of the way &mdash; if you could use some
-                    accountability with your health goals &mdash; book your free 15-minute
-                    health history. I offer this no-cost consultation to evaluate if health
-                    coaching is the right fit for you. No strings attached.
+                    Book your free 15-minute call to see if owl is the right coack for you.
                 </p>
 
                 <a
@@ -139,8 +113,10 @@ const Coaching = () => {
                                 tracking-widest2 uppercase px-10 py-4 rounded
                                 hover:brightness-110 transition-all duration-300'
                 >
-                    Book Your Free Call
+                    Schedule Now
                 </a>
+                </div>
+                
             </section>
         </main >
     );
