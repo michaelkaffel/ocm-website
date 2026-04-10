@@ -10,6 +10,6 @@
     { "source": "/articles/categories/:slug","destination": "/articles",  "permanent": true }
   ],
   "rewrites": [
-    { "source": "/((?!assets/|api/|src/|@|node_modules/)[^.]*)", "destination": "/index.html" }
+    { "source": "/((?!assets/|api/|src/|@|node_modules|admin/)[^.]*)", "destination": "/index.html" }
   ]
 }
