@@ -35,7 +35,7 @@ const handler = async (req, res) => {
          'authorization:github:success:${JSON.stringify({ token: data.access_token, provider: 'github' })}',
          '*'
          );
-        setTimeout(() => window.close(), 500);
+        setTimeout(() => window.close(), 1500);
          } else {
             document.write('<p>Auth complete. You may close this tab.</p>');
             }
