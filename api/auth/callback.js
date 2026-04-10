@@ -23,16 +23,24 @@ const handler = async (req, res) => {
             'authorization:github:error:${data.error}',
             '*'
             );
+            window.close();
             </script>
             `);
     }
 
     return res.status(200).send(`
          <script>
+         if (window.opener) {
          window.opener.postMessage(
          'authorization:github:success:${JSON.stringify({ token: data.access_token, provider: 'github' })}',
          '*'
          );
+        setTimeout(() => window.close(), 500);
+         } else {
+            document.write('<p>Auth complete. You may close this tab.</p>');
+            }
+         
+         
          </script>
     `);
 }
