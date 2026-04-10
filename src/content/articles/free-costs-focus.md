@@ -4,6 +4,7 @@ slug: "free-costs-focus"
 date: "Sep 21, 2021"
 category: "dopamine, lifestyle, ADHD"
 readTime: "4 min read"
+description: "Free apps aren't free — advertisers pay with your attention. Why the ad-driven dopamine economy is quietly destroying our ability to focus."
 thumbnail: "https://static.wixstatic.com/media/11062b_702aa61483f74d28a8835f37022071af~mv2.jpg"
 ---
 

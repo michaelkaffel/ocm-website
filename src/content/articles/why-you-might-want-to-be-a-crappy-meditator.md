@@ -4,6 +4,7 @@ slug: "why-you-might-want-to-be-a-crappy-meditator"
 date: "Dec 26, 2021"
 category: "mindfulness, meditation, mental health"
 readTime: "6 min read"
+description: "If you noticed you were anxious during meditation, congratulations — you meditated. Why being a crappy meditator is exactly the point."
 thumbnail: "https://static.wixstatic.com/media/11062b_8652cbafe56e445aa66870338829591e~mv2.jpg"
 ---
 

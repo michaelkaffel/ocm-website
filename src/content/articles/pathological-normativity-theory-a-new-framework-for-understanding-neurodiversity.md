@@ -4,6 +4,7 @@ slug: "pathological-normativity-theory-a-new-framework-for-understanding-neurodi
 date: "Mar 22, 2026"
 category: "neurodiversity, mental health, childhood trauma"
 readTime: "10 min read"
+description: "'Neurotypical' isn't a biological baseline — it's cultural conditioning. Pathological Normativity Theory reframes neurodivergence as resistance, not disorder."
 thumbnail: "/images/articles/pathological-normativity.jpg"
 ---
 

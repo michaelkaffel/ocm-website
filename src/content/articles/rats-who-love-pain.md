@@ -4,6 +4,7 @@ slug: "rats-who-love-pain"
 date: "Sep 4, 2021"
 category: "neuroscience, childhood trauma, attachment"
 readTime: "4 min read"
+description:'"UC Davis research shows neglected rats seek pain-associated scents. What this reveals about why humans with difficult childhoods repeat familiar suffering."
 thumbnail: "https://static.wixstatic.com/media/11062b_fed48495cb5241b7a59ab9981a0242cf~mv2.jpg"
 ---
 
