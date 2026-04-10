@@ -11,10 +11,13 @@ const handler = async (req, res) => {
             client_id: process.env.GITHUB_CLIENT_ID,
             client_secret: process.env.GITHUB_CLIENT_SECRET,
             code,
+            redirect_uri: 'https://ocm-website-three.vercel.app/api/auth/callback'
         }),
     });
 
     const data = await response.json();
+    console.log('github oauth response keys:', Object.keys(data));
+    console.log('has token:', !!data.access_token);
 
     if (data.error) {
         return res.status(400).send(`
