@@ -4,8 +4,43 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OCM Content Manager</title>
-    <link rel="cms-config-url" type="application/json" href="/admin/config.yml">
+    <script>window.CMS_MANUAL_INIT = true;</script>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   </head>
-  <body></body>
+  <body>
+    <script>
+      CMS.init({
+        config: {
+          backend: {
+            name: 'github',
+            repo: 'michaelkaffel/ocm-website',
+            branch: 'main',
+            base_url: 'https://ocm-website-three.vercel.app',
+            auth_endpoint: '/api/auth',
+          },
+          media_folder: 'public/images/articles',
+          public_folder: '/images/articles',
+          collections: [
+            {
+              name: 'articles',
+              label: 'Articles',
+              folder: 'src/content/articles',
+              create: true,
+              slug: '{{slug}}',
+              fields: [
+                { label: 'Title',       name: 'title',       widget: 'string' },
+                { label: 'Slug',        name: 'slug',        widget: 'string' },
+                { label: 'Date',        name: 'date',        widget: 'string' },
+                { label: 'Category',    name: 'category',    widget: 'string' },
+                { label: 'Read Time',   name: 'readTime',    widget: 'string' },
+                { label: 'Description', name: 'description', widget: 'text' },
+                { label: 'Thumbnail URL', name: 'thumbnail', widget: 'string', required: false },
+                { label: 'Body',        name: 'body',        widget: 'markdown' },
+              ],
+            },
+          ],
+        },
+      });
+    </script>
+  </body>
 </html>
