@@ -4,6 +4,7 @@ slug: "the-silent-nightmare-of-women-with-adhd"
 date: "Mar 13, 2026"
 category: "adhd, childhood trauma, mental health"
 readTime: "12 min read"
+description: "Girls with ADHD are called spacey, not diagnosed. Decades later their bodies pay the price — in autoimmune disease, heart conditions, and misdiagnosis."
 thumbnail: "https://static.wixstatic.com/media/50feef_aeb2b9cc1ae34a6bba4ffca5846d78e8~mv2.png"
 ---
 

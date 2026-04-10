@@ -4,6 +4,7 @@ slug: "finish-line-freak-out"
 date: "Sep 1, 2021"
 category: "neuroscience, mindfullness, self-awareness"
 readTime: "4 min read"
+description: "Why do we freak out right before the finish line — even when we've done everything right? The neurobiology of deadline panic and changing old habits."
 thumbnail: "https://static.wixstatic.com/media/11062b_2774e9d666c84ff59c157e2f26ff326d~mv2.jpg"
 ---
 I work best first thing in the morning. Which is why I typically wake up & go to a coffee shop and start work right away. Not yesterday. Yesterday, I did everything I possibly could do NOT open my laptop. Just thinking about reaching to grab my laptop to begin work made my whole body vibrate in a very VERY unpleasant way. I couldn't work. It was the last full work day before I needed to send out my first set of newsletters, have chapter one of my manuscript ready to send to patrons as well as a few other time sensitive things I needed to take care of.

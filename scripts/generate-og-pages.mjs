@@ -246,7 +246,7 @@ files.forEach((file) => {
 
     writePage(`articles/${fm.slug}`, {
         title: fm.title || '',
-        description: extractDescription(content),
+        description: fm.description || extractDescription(content),
         image: resolveImage(fm.thumbnail),
         url: `${SITE_URL}/articles/${fm.slug}`,
         type: 'article',
