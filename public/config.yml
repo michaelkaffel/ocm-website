@@ -2,7 +2,7 @@ backend:
   name: github
   repo: michaelkaffel/ocm-website
   branch: main
-  base_url: https://ocm-website-three.vercel.app
+  base_url: https://owlchrysalismedicine.com
   auth_endpoint: /api/auth
 
 publish_mode: editorial_workflow
