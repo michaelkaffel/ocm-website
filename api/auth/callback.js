@@ -16,36 +16,35 @@ const handler = async (req, res) => {
     });
 
     const data = await response.json();
-    console.log('github oauth response keys:', Object.keys(data));
-    console.log('has token:', !!data.access_token);
 
     if (data.error) {
-        return res.status(400).send(`
-            <script>
-            window.opener.postMessage(
-            'authorization:github:error:${data.error}',
-            '*'
-            );
-            window.close();
-            </script>
+        return res.status(400).send(`<!DOCTYPE html>
+            <html><body><script>
+                if (window.opener) {
+                    window.opener.postMessage("authorization:github:error:${data.error}", "*");
+                }
+                window.close();
+            </script></body></html>
             `);
     }
 
-    return res.status(200).send(`
-         <script>
-         if (window.opener) {
-         window.opener.postMessage(
-         'authorization:github:success:${JSON.stringify({ token: data.access_token, provider: 'github' })}',
-         '*'
-         );
-        setTimeout(() => window.close(), 1500);
-         } else {
-            document.write('<p>Auth complete. You may close this tab.</p>');
-            }
-         
-         
-         </script>
-    `);
+    const content = JSON.stringify({ token: data.access_token, provider: 'github' });
+
+    return res.status(200).send(`<!DOCTYPE html>
+        <html><body><script>
+            (function() {
+                function receiveMessage(e) {
+                    window.opener.postMessage(
+                        'authorization:github:success:${content}',
+                        e.origin
+                    );
+                    window.removeEventListener("message", receiveMessage);
+                }
+                window.addEventListener("message", receiveMessage, false);
+                window.opener.postMessage("authorizing:github", "*"); 
+            })();
+            </script></body></html>
+        `);
 }
 
 export default handler;
