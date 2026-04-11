@@ -6,7 +6,8 @@ import podcastArt from '../assets/podcast-graphic.png'
 import { getAllArticles } from '../utils/articles';
 import ArticleCard from '../components/ArticleCard';
 import usePageTitle from '../hooks/usePageTitle';
-import emailjs from '@emailjs/browser'
+import emailjs from '@emailjs/browser';
+import musicImage from '../assets/music.png';
 
 
 const latestArticles = getAllArticles().slice(0, 3);
@@ -15,6 +16,9 @@ const CALENDLY_URL = 'https://calendly.com/owlmedicine/15min';
 const APPLE_EMBED_URL = 'https://embed.podcasts.apple.com/us/podcast/speak-plainly-podcast/id1594904790';
 const SPOTIFY_URL = 'https://open.spotify.com/show/4BsTYLvSUe6HOrkkMG4BqG';
 const APPLE_URL = 'https://podcasts.apple.com/us/podcast/speak-plainly-podcast/id1594904790';
+const MUSIC_URL = 'https://www.youtube.com/@OwlCMedicine/playlists';
+const GIGS_URL = 'https://www.facebook.com/profile.php?id=61561755056536';
+
 
 const Home = () => {
     usePageTitle('');
@@ -31,7 +35,7 @@ const Home = () => {
                 import.meta.env.VITE_EMAILJS_OCM_SERVICE_ID,
                 import.meta.env.VITE_EMAILJS_OCM_TEMPLATE_ID,
                 formRef.current,
-                { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY}
+                { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
             );
             setStatus('success');
             formRef.current.reset();
@@ -40,7 +44,7 @@ const Home = () => {
             setStatus('error');
         }
     };
-    
+
     return (
         <main>
             {/* ── Hero ──────────────────────── */}
@@ -175,7 +179,7 @@ const Home = () => {
             </section>
 
             {/* ── Coaching ──────────────────────── */}
-            <section id='coaching' className='py-24 px-6 bg-brand-surface'>
+            <section id='coaching' className='py-24 px-6 bg-brand-accent-subtle'>
                 <div className='mx-auto max-w-3xl text-center'>
                     <h2 className='font-heading text-4xl uppercase text-brand-text'>Coaching</h2>
 
@@ -194,6 +198,60 @@ const Home = () => {
                 </div>
             </section>
 
+            {/* ── Music ──────────────────────── */}
+            <section
+                id='music'
+                className='relative flex min-h-[70vh] flex-col lg:flex-row lg:items-stretch overflow-hidden bg-brand-surface'
+            >
+                <div className='w-full lg:w-1/2 min-h-[40vh] lg:min-h-full'>
+                    <img
+                        src={musicImage}
+                        alt='Owl C Medicine performing music'
+                        className='h-full w-full object-cover object-center'
+                    />
+                </div>
+
+                <div className='flex w-full flex-col justify-center px-8 py-16 text-center lg:text-left lg:w-1/2 lg:px-16 lg:py-24'>
+                    <h2 className='font-heading text-4xl uppercase text-brand-text'>
+                        Music
+                    </h2>
+
+                    <p className='mt-6 max-w-md text-lg leading-relaxed text-brand-text/80 font-sans'>
+                        Intensely emotional and powerfully vulnerable.
+                    </p>
+
+                    <div className='mt-8 flex flex-col items-center lg:items-start gap-4'>
+                        <a
+                            href={MUSIC_URL}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                            className='group flex items-center gap-2 text-brand-accent font-sans font-semibold uppercase tracking-[0.15em] text-sm transition-opacity hover:opacity-70'
+                        >
+                            Check Out My Music
+                            <span aria-hidden='true' className='transition-transform group-hover:translate-x-1'>→</span>
+                        </a>
+
+                        <a
+                            href={GIGS_URL}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                            className='group flex items-center gap-2 text-brand-accent font-sans font-semibold uppercase tracking-[0.15em] text-sm transition-opacity hover:opacity-70'
+                        >
+                            Upcoming Gigs
+                            <span aria-hidden='true' className='transition-transform group-hover:translate-x-1'>→</span>
+                        </a>
+
+                        <a
+                            href='#contact'
+                            className='group flex items-center gap-2 text-brand-accent font-sans font-semibold uppercase tracking-[0.15em] text-sm transition-opacity hover:opacity-70'
+                        >
+                            Book me for your Venue
+                            <span aria-hidden='true' className='transition-transform group-hover:translate-x-1'>→</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
             {/* ── Articles ──────────────────────── */}
             <section id='articles' className='py-24 px-6 bg-brand-bg'>
                 <div className='mx-auto max-w-5xl'>
@@ -203,7 +261,7 @@ const Home = () => {
 
                     <div className='mt-12 grid gap-8 lg:grid-cols-3'>
                         {latestArticles.map((article) => (
-                            <ArticleCard key={article.slug} article={article}/>
+                            <ArticleCard key={article.slug} article={article} />
                         ))}
                     </div>
                 </div>
@@ -217,7 +275,7 @@ const Home = () => {
                     <p className='mt-6 text-lg leading-relaxed text-brand-text/80 font-sans'>
                         I'm Owl — coach, author, health educator and musician. <br />I integrate the intolerable to achieve the impossible.
                     </p>
-                    
+
                 </div>
             </section>
 

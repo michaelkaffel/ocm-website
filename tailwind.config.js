@@ -10,6 +10,7 @@ export default {
                     border:     'var(--color-border)',
                     accent:     'var(--color-accent)',
                     'accent-hover': 'var(--color-accent-hover)',
+                    'accent-subtle': 'var(--color-accent-subtle)',
                     text:       'var(--color-text)',
                     muted:      'var(--color-muted)',
                     faint:      'var(--color-faint)'
