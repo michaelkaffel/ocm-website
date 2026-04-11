@@ -8,6 +8,7 @@
   --color-surface:      #1a1a2e;
   --color-border:       rgba(255, 255, 255, 0.08);
   --color-accent:       #c1440e;
+  --color-accent-subtle: rgba(193, 68, 14, 0.10);
   --color-accent-hover: #a33609;
   --color-text:         #f0ede8;
   --color-muted:          rgba(240, 237, 232, 0.60);

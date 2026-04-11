@@ -1,4 +1,4 @@
-import coachingHero from '../assets/coaching-hero.png'
+import coachingHero from '../assets/coaching-hero2.png'
 import usePageTitle from '../hooks/usePageTitle';
 
 const CALENDLY_URL = 'https://calendly.com/owlmedicine/15min';
