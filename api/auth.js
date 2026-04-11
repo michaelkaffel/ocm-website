@@ -6,7 +6,7 @@ const handler = async (req, res) => {
         const params = new URLSearchParams({
             client_id: process.env.GITHUB_CLIENT_ID,
             scope: 'repo,user',
-            redirect_uri: 'https://ocm-website-three.vercel.app/api/auth/callback'
+            redirect_uri: 'https://owlchrysalismedicine.com/api/auth/callback'
         });
         return res.redirect(
             `https://github.com/login/oauth/authorize?${params}`
