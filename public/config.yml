@@ -22,5 +22,5 @@ collections:
       - { label: Category, name: category, widget: string }
       - { label: Read Time, name: readTime, widget: string }
       - { label: Description, name: description, widget: text }
-      - { label: Thumbnail URL, name: thumbnail, widget: string, required: false }
+      - { label: Thumbnail, name: thumbnail, widget: image, required: false }
       - { label: Body, name: body, widget: markdown }
