@@ -10,6 +10,7 @@
     { "source": "/articles/categories/:slug","destination": "/articles",  "permanent": true }
   ],
   "rewrites": [
+    { "source": "/config.yml", "destination": "/admin.config.yml" },
     { "source": "/((?!assets/|api/|src/|@|node_modules|admin/)[^.]*)", "destination": "/index.html" }
   ]
 }
