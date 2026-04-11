@@ -5,7 +5,7 @@ date: "Aug 12, 2021"
 category: "attachment, childhood trauma, mental health"
 readTime: 13
 description: "Every child in a stressful home faces an impossible choice: be authentic or stay attached. How this silent war shapes us for life."
-thumbnail: "https://static.wixstatic.com/media/11062b_48e258f2eea64a309fe372a2567324e0~mv2.jpg"
+thumbnail: "/images/articles/the-attachment-authenticity-war.jpg"
 ---
 
 The Attachment v Authenticity War

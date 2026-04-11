@@ -5,7 +5,7 @@ date: "Oct 15, 2021"
 category: "addiction, childhood trauma, self medication"
 readTime: 7
 description: "Addiction isn't self-medication — it's self-supplementation. A raw look at how unsafe childhoods drive adults to seek the feeling of safety they never had."
-thumbnail: "https://static.wixstatic.com/media/nsplsh_90ab0637fad644faa2c961ce26ae1338~mv2.jpg"
+thumbnail: "/images/articles/addiction-is-supplementation-not-self-medication.jpg"
 ---
 
 Becoming an adult is a very specific yet abstract concept and a hard thing to define. There are just so many ways one can choose to describe this complicated process.  All attempts will be incomplete but choosing a good lens to view if from makes it easier. One useful lens or definition for describing becoming an adult emotionally, at least from an experiential stand point is the slow progression from simple single emotions into complex nuanced and often conflicting emotions happening simultaneously.

@@ -5,7 +5,7 @@ date: "Oct 18, 2021"
 category: "dopamine, lifestyle, addiction"
 readTime: 9
 description: "Social media broke the ancient link between effort and reward. How Instagram hijacks dopamine — and why saying no to yourself is the most powerful skill."
-thumbnail: "https://static.wixstatic.com/media/11062b_77b9163a304d4b80bbfb184acd51443c~mv2.jpg"
+thumbnail: "/images/articles/putting-work-back-in-reward-for-a-better-life.jpg"
 ---
 
 Work and reward have never in the history of the human experience been able to be separated. Till now. Thank’s Zuck.

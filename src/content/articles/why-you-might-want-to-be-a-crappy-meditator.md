@@ -5,7 +5,7 @@ date: "Dec 26, 2021"
 category: "mindfulness, meditation, mental health"
 readTime: 6
 description: "If you noticed you were anxious during meditation, congratulations — you meditated. Why being a crappy meditator is exactly the point."
-thumbnail: "https://static.wixstatic.com/media/11062b_8652cbafe56e445aa66870338829591e~mv2.jpg"
+thumbnail: "/images/articles/why-you-might-want-to-be-a-crappy-meditator.jpg"
 ---
 
 So you hate meditation. You just can’t sit still. You feel anxious and agitated. You just can’t do it. You have tried it a few times but you came to the inevitable conclusion you’re a crappy meditator. I say HUZZAH! Congratulations you did great!

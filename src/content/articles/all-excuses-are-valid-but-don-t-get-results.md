@@ -5,7 +5,7 @@ date: "Sep 26, 2021"
 category: "excuses, self-awareness, vision"
 readTime: 5
 description: "our excuses are valid. Every single one. But valid doesn't mean useful. What do you actually want — vindication or results?"
-thumbnail: "https://static.wixstatic.com/media/11062b_83d0d117e4054bcab53dc1ac33aac610~mv2.jpg"
+thumbnail: "/images/articles/all-excuses-are-valid-but-don-t-get-results.jpg"
 ---
 
 All excuses are valid but they don’t get results. No matter what we choose to attempt in our lives there will always be things in our way. Some systemic and some personal. All of the things that stand in our way make it harder to reach our goals. These stumbling blocks are often the excuse people use for why something wasn’t done or can’t be done. Each and every one of these excuses are valid.

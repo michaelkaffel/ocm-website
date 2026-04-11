@@ -5,7 +5,7 @@ date: "Sep 15, 2021"
 category: "neuroscience, evolutionary biology, lifestyle"
 readTime: 5
 description: "fMRI studies can predict political affiliation with 95% accuracy using disgust responses alone. What neuroscience reveals about how we form our politics."
-thumbnail: "https://static.wixstatic.com/media/0a8802f2cb234551bc855be44c0f34de.jpg"
+thumbnail: "/images/articles/conservatives-are-born-liberals-are-made.jpg"
 ---
 
 In the early 2000’s some sociologist approached some neuro imaging specialists with a bit of evidence saying they have reason to believe that disgust and visceral reactions are a strong indicator of political affiliation. At first the imaging specialist laughed it off, later agreeing to the study when presented with more evidence of their hypothesis. An FMRI was accomplished while patients were being shown pictures meant to arouse a few things including disgust. The differences in which parts of the brain lit up was so obvious between liberals and conservatives only using the FMRI images the researcher was able to predict who was conservative or liberal with 95% accuracy!! VERY little in science of especially brains scores that high in predictability.

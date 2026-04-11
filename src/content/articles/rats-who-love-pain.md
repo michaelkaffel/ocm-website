@@ -5,7 +5,7 @@ date: "Sep 4, 2021"
 category: "childhood trauma, mental health, neuroscience"
 readTime: 4
 description: "What fear-conditioned rats at UC Davis reveal about human development — and why some of us are wired to run straight toward danger."
-thumbnail: "https://static.wixstatic.com/media/11062b_fed48495cb5241b7a59ab9981a0242cf~mv2.jpg/v1/fill/w_1816,h_1212,fp_0.50_0.50,q_90,enc_avif,quality_auto/11062b_fed48495cb5241b7a59ab9981a0242cf~mv2.jpg"
+thumbnail: "/images/articles/rats-who-love-pain.jpg"
 ---
 
 At the MIND institute, UC Davis some really cool research is happening. They have recently been doing some studies with rats. In one of those studies they are "fear conditioning" a previously meaningless scent (peppermint) with an electrical foot shock. (unpleasant) They present the rat with the peppermint scent just before they shock its foot. Mr. Rat doesn't like that very much. The really interesting thing is if that rat was not properly cared for during a specific developmental period that rat will perform certain maze tasks almost backwards from the expectation. In a "Y" maze in which a rat is placed at the "bottom" of the "Y," Mr Rat has to choose which side, right or left he will explore first. The rats without proper care-giving (defined as species expected stimuli) during the sensitive period will actually wander toward the shock/pain associated peppermint side of the "Y" over controls.

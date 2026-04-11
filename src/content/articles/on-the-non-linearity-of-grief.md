@@ -5,7 +5,7 @@ date: "Mar 24, 2026"
 category: "grief, mental health, self-awareness"
 readTime: 6
 description: "Grief isn't stages — it's a spiral. A psycho-biological look at why grief is nonlinear by design, and why that's not a flaw but the engine of healing."
-thumbnail: "https://static.wixstatic.com/media/50feef_d0223889a23d4433999bfb7bfa954189~mv2.png"
+thumbnail: "/images/articles/on-the-non-linearity-of-grief.png"
 ---
 
 ## Forget the stages of grief; learn the Engine

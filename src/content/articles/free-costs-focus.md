@@ -5,7 +5,7 @@ date: "Sep 21, 2021"
 category: "dopamine, lifestyle, ADHD"
 readTime: 4
 description: "Free apps aren't free — advertisers pay with your attention. Why the ad-driven dopamine economy is quietly destroying our ability to focus."
-thumbnail: "https://static.wixstatic.com/media/11062b_702aa61483f74d28a8835f37022071af~mv2.jpg"
+thumbnail: "/images/articles/free-costs-focus.jpg"
 ---
 
 I wish someone would have told me this about things like facebook 15 years ago. We just didn’t know. There is a huge increase in adhd trends in the last few decades. No one can seem to keep focused. I'm sure by now you’ve heard of dopamine. There are pop science articles about it everywhere. They all say we in the developed world, especially the USA, are often looking for our next dopamine boost. Why? What gives us dopamine boosts? Lots of things do but advertisements are virtuosic in their playing with the body’s dopamine system. Hear me out.

@@ -5,7 +5,7 @@ date: "Oct 23, 2021"
 category: "mental health, abandonment, childhood trauma"
 readTime: 8
 description: "The most dangerous neglect isn't absence — it's being ignored by a parent in the same room. How proximal abandonment quietly shapes a generation."
-thumbnail: "https://static.wixstatic.com/media/nsplsh_bd7a1c488f7d4195873547fbe1e4784e~mv2.jpg"
+thumbnail: "/images/articles/proximal-abandonment-the-modern-mental-health-dilemma.jpg"
 ---
 
 It goes without saying that abandonment and neglect are terrible things to experience. But we have often placed them a lesser offense than say physical abuse. In 2020 it was reported that emotional damage like emotional neglect can have worse long term effects than even physical abuse of children. As awful as it can be to be beaten yelled at or abused, it is still be worse to be ignored.

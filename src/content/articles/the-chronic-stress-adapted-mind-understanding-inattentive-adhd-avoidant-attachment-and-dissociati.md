@@ -5,7 +5,7 @@ date: "Mar 9, 2026"
 category: "ADHD, attatchment, childhood trauma"
 readTime: 12
 description: " Inattentive ADHD, avoidant attachment, and dissociation aren't separate diagnoses — they're three faces of the same nervous system adaptation to chronic stress."
-thumbnail: "https://static.wixstatic.com/media/50feef_1f93e54c2bd140699364fcffebc51cdd~mv2.png"
+thumbnail: "/images/articles/the-chronic-stress-adapted-mind-understanding-inattentive-adhd-avoidant-attachment-and-dissociati.png"
 ---
 
 ### Introduction: The Problem of Fragmented Diagnosis
