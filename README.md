@@ -2,7 +2,7 @@
 
 A custom React web application built for health coach and podcast host Owl Chrysalis, migrated from an existing Wix site to a fully self-hosted, performance-optimized platform.
 
-**Live site:** [owlchrysalismedicine.com](https://ocm-website-three.vercel.app/)
+**Live site:** [owlchrysalismedicine.com](https://owlchrysalismedicine.com/)
 
 ---
 
