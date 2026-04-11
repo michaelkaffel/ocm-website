@@ -3,7 +3,7 @@ title: "Satisfy the Beast!"
 slug: "satisfy-the-beast"
 date: "Nov 17, 2021"
 category: "lifestyle, evolutionary biology, mental health"
-readTime: "6 min read"
+readTime: 6
 description: :You're not broken — you're misusing the tool. A practical guide to giving your body the species-expected experiences it was built for."
 thumbnail: "https://static.wixstatic.com/media/nsplsh_4270482d2d7570526c4373~mv2_d_1982_2973_s_2.jpg"
 ---

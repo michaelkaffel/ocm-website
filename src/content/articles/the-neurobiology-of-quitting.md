@@ -3,7 +3,7 @@ title: "The Neurobiology of Quitting"
 slug: "the-neurobiology-of-quitting"
 date: "Apr 10, 2026"
 category: "neuroscience, dopamine, mental health"
-readTime: "5 min read"
+readTime: 5
 description: "Quitting isn't a conscious choice — it's a brain stem decision. What a 2019 study on nociceptin neurons reveals about the biology of giving up."
 thumbnail: "https://static.wixstatic.com/media/50feef_1852014d12c4471f8a8ad12898fe6c86~mv2.png"
 ---

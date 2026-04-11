@@ -3,7 +3,7 @@ title: "The Neurobiology of 'Fuck-it'"
 slug: "the-neurobiology-of-fuck-it"
 date: "Sep 13, 2021"
 category: "neuroscience, dopamine, mental health"
-readTime: "5 min read"
+readTime: 5
 description: "A 2019 Washington University study mapped the exact brain mechanism behind giving up. What nociceptin neurons reveal about quitting — and how to use it."
 thumbnail: "https://static.wixstatic.com/media/11062b_4d7e9215d20a40159c6f78f78817520e~mv2.jpg"
 ---

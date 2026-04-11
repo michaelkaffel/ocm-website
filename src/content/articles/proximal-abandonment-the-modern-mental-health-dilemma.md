@@ -3,7 +3,7 @@ title: "Proximal Abandonment- The Modern Mental Health Dilemma"
 slug: "proximal-abandonment-the-modern-mental-health-dilemma"
 date: "Oct 23, 2021"
 category: "mental health, abandonment, childhood trauma"
-readTime: "8 min read"
+readTime: 8
 description: "The most dangerous neglect isn't absence — it's being ignored by a parent in the same room. How proximal abandonment quietly shapes a generation."
 thumbnail: "https://static.wixstatic.com/media/nsplsh_bd7a1c488f7d4195873547fbe1e4784e~mv2.jpg"
 ---

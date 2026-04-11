@@ -3,7 +3,7 @@ title: "Conservatives are Born Liberals are Made"
 slug: "conservatives-are-born-liberals-are-made"
 date: "Sep 15, 2021"
 category: "neuroscience, evolutionary biology, lifestyle"
-readTime: "5 min read"
+readTime: 5
 description: "fMRI studies can predict political affiliation with 95% accuracy using disgust responses alone. What neuroscience reveals about how we form our politics."
 thumbnail: "https://static.wixstatic.com/media/0a8802f2cb234551bc855be44c0f34de.jpg"
 ---

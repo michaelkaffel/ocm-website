@@ -29,7 +29,7 @@ const ArticleCard = ({article, compact = false}) => {
                 {!compact && (
                     <div className='mt-auto flex items-center justify-between pt-4'>
                         <p className='text-xs text-brand-text/50 font-sans'>
-                            {article.readTime}
+                            {article.readTime} min read
                         </p>
                         <span className='text-sm font-semibold text-brand-accent transition-opacity group-hover:opacity-80'>
                             Read More →

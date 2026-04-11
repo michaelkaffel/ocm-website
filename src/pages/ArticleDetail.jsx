@@ -54,7 +54,7 @@ const ArticleDetail = () => {
                 <div className='mt-4 flex items-center justify-between text-xs text-brand-text/50 font-sans'>
                     <div className='flex items-center gap-4'>
                         {article.date && <span>{article.date}</span>}
-                        {article.readTime && <span>{article.readTime}</span>}
+                        {article.readTime && <span>{article.readTime} min read</span>}
                     </div>
 
                     <ShareButtons title={article.title} slug={slug} />

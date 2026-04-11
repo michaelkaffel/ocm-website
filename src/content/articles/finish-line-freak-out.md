@@ -3,7 +3,7 @@ title: "Finish line freak out"
 slug: "finish-line-freak-out"
 date: "Sep 1, 2021"
 category: "neuroscience, mindfullness, self-awareness"
-readTime: "4 min read"
+readTime: 4
 description: "Why do we freak out right before the finish line — even when we've done everything right? The neurobiology of deadline panic and changing old habits."
 thumbnail: "https://static.wixstatic.com/media/11062b_2774e9d666c84ff59c157e2f26ff326d~mv2.jpg"
 ---
