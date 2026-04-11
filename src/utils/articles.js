@@ -10,7 +10,7 @@ const parseFrontmatter = (raw) => {
 
     const meta = {};
     for (const line of match[1].split('\n')) {
-        const m = line.match(/^(\w+):\s*"(.*)"/);
+        const m = line.match(/^(\w+):\s*"?(.*?)"?\s*$/);
         if (m) meta[m[1]] = m[2];
     }
 
