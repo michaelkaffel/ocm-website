@@ -58,6 +58,17 @@ const Footer = () => (
                         Michael Kaffel
                     </a>
                 </p>
+                <p className='ml-2'>
+                    Photos by{' '}
+                    <a
+                        href='https://www.instagram.com/teren_o/'
+                        target='_blank' rel='noreferrer'
+                        className='hover:text-brand-accent underline'
+                    >
+                         Teren Oddo
+                    </a>
+                   
+                </p>
             </div>
 
 

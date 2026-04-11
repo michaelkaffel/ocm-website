@@ -203,11 +203,11 @@ const Home = () => {
                 id='music'
                 className='relative flex min-h-[70vh] flex-col lg:flex-row lg:items-stretch overflow-hidden bg-brand-surface'
             >
-                <div className='w-full lg:w-1/2 min-h-[40vh] lg:min-h-full'>
+                <div className='w-full lg:w-1/2 h-[100vh] md:h-[100vh] lg:h-auto lg:min-h-full overflow-hidden'>
                     <img
                         src={musicImage}
                         alt='Owl C Medicine performing music'
-                        className='h-full w-full object-cover object-center'
+                        className='h-full w-full object-cover object-top lg:object-center'
                     />
                 </div>
 
@@ -216,7 +216,7 @@ const Home = () => {
                         Music
                     </h2>
 
-                    <p className='mt-6 max-w-md text-lg leading-relaxed text-brand-text/80 font-sans'>
+                    <p className='mt-6 max-w-md mx-auto lg:mx-0 lg:text-left text-lg leading-relaxed text-brand-text/80 font-sans'>
                         Intensely emotional and powerfully vulnerable.
                     </p>
 
