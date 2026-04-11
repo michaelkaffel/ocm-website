@@ -30,7 +30,7 @@ No traditional backend. Articles are stored as static markdown files loaded at b
 ## Features
 
 ### Content Migration
-All 17 blog articles were migrated from Wix using a custom Node.js scraper built with Cheerio. The scraper extracted titles, body text, thumbnails, publish dates, and categories from each article URL. A cleanup script handled common formatting issues (concatenated dates, Wix "related posts" bleed, trailing category tags), with remaining edge cases resolved manually. Articles are stored as markdown with frontmatter in `src/content/articles/`.
+All 17 blog articles were migrated from Wix using a custom Node.js scraper built with Cheerio. The scraper extracted titles, body text, thumbnails, publish dates, and categories from each article URL. A cleanup script handled common formatting issues (concatenated dates, Wix "related posts" bleed, trailing category tags), with remaining edge cases resolved manually. Articles are stored as markdown with frontmatter in `src/content/articles/`. Article thumbnails are hosted locally in `public/images/articles/` — all images were migrated from the Wix CDN during the DNS cutover.
 
 ### Articles System
 - Static markdown articles loaded at build time — no API, no database
@@ -135,7 +135,6 @@ All brand colors and typography are defined as CSS custom properties in `:root`.
 | `/articles/:slug` | Article detail with markdown rendering and social share |
 | `/podcast` | Episode listing with search filtering and skeleton loading |
 | `/podcast/:slug` | Episode detail with embedded player and tabbed Show Notes / Chapters / Transcript |
-| `/contact` | Contact form wired to EmailJS |
 | `/admin` | Decap CMS — GitHub OAuth login, article creation and editing |
 
 ---
@@ -144,27 +143,20 @@ All brand colors and typography are defined as CSS custom properties in `:root`.
 
 ### DNS & Hosting
 - **DNS:** Cloudflare (migrated from Weebly/Square nameservers)
+- **Domain registrar:** Weebly/Square (pending transfer to Cloudflare Registrar)
 - **Hosting:** Vercel (Firebase Hosting considered but Vercel chosen for Edge Function support)
-- **Domain:** `owlchrysalismedicine.com` — registered at Weebly/Square, DNS managed at Cloudflare
-
-### Google Search Console
-- Property verified for `owlchrysalismedicine.com` via Cloudflare DNS TXT record
-- Wix sitemap submitted as pre-migration baseline
-- Post-migration: submit `sitemap.xml` from the new React build
+- **Domain:** `owlchrysalismedicine.com` — primary domain, non-www canonical. `www` redirects to bare domain via 301.
 
 ### Google Analytics
-- GA4 property: "Owl Chrysalis Medicine" under the Owl C Medicine account
-- Connected to Wix via Google Tag for pre-migration baseline data collection
-- Post-migration: move the GA4 tracking tag to the React site
+- GA4 property: "Owl Chrysalis Medicine" under the Owl C Medicine account (ID: 130052043)
+- Measurement ID: `G-DCCVHMHJGR`
+- Tag installed in `index.html` — tracking live on the React site
+- Search Console linked to the GA4 property for organic search query reporting
 
-### Pre-migration Checklist
-Before DNS cutover to Vercel:
-1. Decide www vs non-www and update `SITE_URL` in `scripts/generate-og-pages.mjs`
-2. Add custom domain in Vercel project settings
-3. Update Cloudflare A/CNAME records to point at Vercel instead of Wix
-4. Update GitHub OAuth App URLs to production domain
-5. Submit new `sitemap.xml` in Google Search Console
-6. Update `base_url` in `public/admin/config.yml` to production domain
+### Google Search Console
+- Property verified for `owlchrysalismedicine.com` (Domain property, covers www and non-www)
+- Pre-migration Wix sitemap retained for 301 redirect monitoring
+- Post-migration sitemap submitted: `https://owlchrysalismedicine.com/sitemap.xml`
 
 ---
 
