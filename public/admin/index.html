@@ -9,6 +9,11 @@
   </head>
   <body>
     <script>
+      window.addEventListener('message', function(e) {
+        console.log('postMessage received:', typeof e.data, e.data && String(e.data).substring(0, 80));
+      })
+    </script>
+    <script>
       CMS.init({
         config: {
           backend: {
