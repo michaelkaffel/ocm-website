@@ -106,8 +106,10 @@ Each episode is normalized from RSS into the following shape:
 ### Decap CMS
 A git-based CMS is available at `/admin`, allowing the client to create and edit markdown articles without touching code. Authentication is handled via GitHub OAuth through two Vercel serverless functions:
 
-- `api/auth.js` — Initiates the GitHub OAuth flow
-- `api/auth/callback.js` — Exchanges the OAuth code for an access token and returns it to the Decap CMS frontend via `postMessage`
+- `api/auth.js` — Initiates the GitHub OAuth flow by redirecting to GitHub's authorization endpoint
+- `api/auth/callback.js` — Exchanges the OAuth code for an access token, then returns it to the Decap CMS frontend using a two-way `postMessage` handshake: the popup first signals `"authorizing:github"` to the opener, waits for Decap to acknowledge, and only then sends the token payload. This handshake is required by Decap's internal auth handler — a single fire-and-forget `postMessage` is silently ignored.
+
+The CMS admin page (`public/admin/index.html`) uses Decap's auto-init mode with the script loaded after the `<div id="nc-root">` mount point in `<body>`, ensuring the DOM target and OAuth message listener are both ready before the login button becomes interactive.
 
 The CMS is configured in `public/admin/config.yml` and targets `src/content/articles/` as the content folder. On publish, Decap commits the markdown file directly to the `main` branch on GitHub, triggering a Vercel redeploy automatically.
 

@@ -5,6 +5,8 @@ backend:
   base_url: https://ocm-website-three.vercel.app
   auth_endpoint: /api/auth
 
+publish_mode: editorial_workflow
+
 media_folder: public/images/articles
 public_folder: /images/articles
 
@@ -16,8 +18,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: Title, name: title, widget: string }
-      - { label: Slug, name: slug, widget: string }
-      - { label: Date, name: date, widget: string }
+      - { label: Date, name: date, widget: datetime, format: "MMM DD, YYYY", time_format: false }
       - { label: Category, name: category, widget: string }
       - { label: Read Time, name: readTime, widget: string }
       - { label: Description, name: description, widget: text }
