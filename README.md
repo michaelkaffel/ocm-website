@@ -17,7 +17,7 @@ The existing Wix site had outgrown what the platform could offer — limited lay
 - **Framework:** Vite + React 18
 - **Routing:** React Router v7
 - **Styling:** Tailwind CSS v3 with CSS custom properties for theming
-- **Email:** EmailJS (contact form)
+- **Email:** EmailJS (contact form), Resend (subscriber notifications + broadcasts)
 - **Scheduling:** Calendly (external redirect)
 - **CMS:** Decap CMS at `/admin` (GitHub OAuth, markdown-based)
 - **Deployment:** Vercel (auto-deploy on push to `main`)
@@ -103,6 +103,33 @@ Each episode is normalized from RSS into the following shape:
 }
 ```
 
+### Subscriber Email Notifications
+
+Article broadcast emails are handled via [Resend](https://resend.com). The Resend account is registered under `owlchrysalismedicine@gmail.com`. The sending domain `owlchrysalismedicine.com` is verified in Resend with DKIM, SPF, and MX records in Cloudflare. Emails are sent from `Owl Chrysalis Medicine <owl@owlchrysalismedicine.com>` with Reply-To set to the same address.
+
+#### Signup flow
+A `SubscribeForm` component (email input + submit button) is embedded in the site footer and at the top of the `/articles` page. On submit it POSTs `{ email }` to `api/subscribe.js` — a Vercel Edge Function that validates the address and adds the contact to the Resend audience using the lazy initialization pattern (`getResend()` factory) required for Edge runtimes. Duplicate submissions are silently treated as success. Unsubscribe handling is managed automatically by Resend.
+
+- **Edge Function:** `api/subscribe.js`
+- **Component:** `src/components/SubscribeForm.jsx`
+- **Audience:** "General" in the Resend dashboard
+
+#### Broadcast flow (manual, per article publish)
+When a new article is published via Decap CMS:
+
+1. Wait for the Vercel redeploy to complete
+2. Go to Resend → **Broadcasts** → **Create email**
+3. Set **To** to the General audience
+4. Fill in the email body using values from the article's frontmatter:
+   - **Subject:** `New article, 'TITLE' out now`
+   - **Thumbnail:** full hosted image URL (e.g. `https://owlchrysalismedicine.com/images/articles/filename.jpg`)
+   - **Article title:** from the `title` frontmatter field
+   - **Description:** from the `description` frontmatter field
+   - **Read Article button link:** full article URL (e.g. `https://owlchrysalismedicine.com/articles/your-slug`)
+5. Preview, then send to the General audience
+
+> **Resend free tier:** 3,000 emails/month, 100/day — sufficient for current audience size.
+
 ### Decap CMS
 A git-based CMS is available at `/admin`, allowing the client to create and edit markdown articles without touching code. Authentication is handled via GitHub OAuth through two Vercel serverless functions:
 
@@ -168,7 +195,7 @@ npm run dev       # standard development (Vite dev server)
 vercel dev        # only needed when testing Edge Functions locally
 ```
 
-> **Note:** Use `npm run dev` for everyday development. Use `vercel dev` only when testing the podcast API routes (`/api/podcast-feed`, `/api/transcript`, `/api/chapters`) or the Decap CMS auth endpoints (`/api/auth`, `/api/auth/callback`) locally.
+> **Note:** Use `npm run dev` for everyday development. Use `vercel dev` only when testing the podcast API routes (`/api/podcast-feed`, `/api/transcript`, `/api/chapters`), the subscriber signup endpoint (`/api/subscribe`), or the Decap CMS auth endpoints (`/api/auth`, `/api/auth/callback`) locally.
 
 Requires a `.env.local` file with the following credentials:
 
@@ -178,4 +205,6 @@ VITE_EMAILJS_TEMPLATE_ID=
 VITE_EMAILJS_PUBLIC_KEY=
 GITHUB_CLIENT_ID=
 GITHUB_CLIENT_SECRET=
+RESEND_API_KEY=
+RESEND_AUDIENCE_ID=
 ```
