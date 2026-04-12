@@ -3,7 +3,7 @@ import SubscribeForm from './SubscribeForm';
 const Footer = () => (
     <footer className='border-t border-brand-border bg-brand-surface'>
         <div className='mt-10 w-full'>
-            <div className='w-[50%] mx-auto'>
+            <div className='w-[75%] lg:w-[50%] mx-auto'>
                 <h3 className='text-white text-center font-semibold mb-3 text-sm uppercase tracking-widest'>
                     Get notified when new articles drop!
                 </h3>

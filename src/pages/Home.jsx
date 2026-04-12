@@ -52,13 +52,13 @@ const Home = () => {
                 id='hero'
                 className='relative flex min-h-screen flex-col lg:flex-row lg:items-center overflow-hidden bg-brand-bg'
             >
-                <div className='relative z-10 w-full px-6 pt-32 pb-8 lg:w-1/2 lg:pt-40 lg:pb-12 lg:pr-8'>
-                    <h1 className='font-heading text-5xl leading-tight sm:text-6xl lg:text-7xl text-brand-text'>
+                <div className='relative z-10 w-full px-6 pt-32 pb-8 lg:w-1/2 lg:pt-1 lg:pb-12 lg:pr-8'>
+                    <h1 className='font-heading text-5xl leading-tight sm:text-6xl lg:text-7xl lg:text-center text-brand-text'>
                         Owl Chrysalis
                         <br />
                         Medicine
                     </h1>
-                    <p className='mt-6 max-w-lg text-lg leading-relaxed text-brand-text/80 font-sans'>
+                    <p className='mt-6 max-w-lg text-lg leading-relaxed text-brand-text/80 lg:text-center font-sans'>
                         MUSIC & MEDICINE
                     </p>
                 </div>

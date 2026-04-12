@@ -16,7 +16,7 @@ const Articles = () => {
                     Articles
                 </h1>
                 <div className='mt-10 w-full'>
-                    <div className='w-[50%] mx-auto'>
+                    <div className='lg:w-[50%] mx-auto'>
                         <SubscribeForm />
                     </div>
                 </div>
