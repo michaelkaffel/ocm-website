@@ -1,5 +1,17 @@
+import SubscribeForm from './SubscribeForm';
+
 const Footer = () => (
     <footer className='border-t border-brand-border bg-brand-surface'>
+        <div className='mt-10 w-full'>
+            <div className='w-[50%] mx-auto'>
+                <h3 className='text-white text-center font-semibold mb-3 text-sm uppercase tracking-widest'>
+                    Get notified when new articles drop!
+                </h3>
+                <SubscribeForm />
+            </div>
+        </div>
+
+
         <div className='max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6'>
 
             <span className='font-heading text-sm tracking-widest2 uppercase text-brand-muted'>
@@ -65,9 +77,9 @@ const Footer = () => (
                         target='_blank' rel='noreferrer'
                         className='hover:text-brand-accent underline'
                     >
-                         Teren Oddo
+                        Teren Oddo
                     </a>
-                   
+
                 </p>
             </div>
 
