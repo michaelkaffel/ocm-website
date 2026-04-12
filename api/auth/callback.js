@@ -11,7 +11,7 @@ const handler = async (req, res) => {
             client_id: process.env.GITHUB_CLIENT_ID,
             client_secret: process.env.GITHUB_CLIENT_SECRET,
             code,
-            redirect_uri: 'https://ocm-website-three.vercel.app/api/auth/callback'
+            redirect_uri: 'https://owlchrysalismedicine.com/api/auth/callback'
         }),
     });
 
