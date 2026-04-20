@@ -37,7 +37,7 @@ const SubscribeForm = () => {
 
     if (status === STATUS.success) {
         return (
-            <p className='text-brand-accent text-sm font-medium'>
+            <p className='text-brand-accent text-center text-sm font-medium'>
                 You&apos;re subscribed. You&apos;ll hear from us when new articles go up.
             </p>
         );
