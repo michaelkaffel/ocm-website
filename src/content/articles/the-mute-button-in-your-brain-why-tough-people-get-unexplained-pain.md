@@ -1,5 +1,5 @@
 ---
-title: "The Mute Button in Your Brain: Why Tough People Get Unexplained Pain "
+title: "The Mute Button in Your Brain: Why Tough People Get Unexplained Pain"
 date: May 29, 2026
 category: "chronic pain, psychology, neuroplastic "
 readTime: "10"
