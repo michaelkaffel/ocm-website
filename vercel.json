@@ -1,17 +1,59 @@
 {
-  "redirects": [
-    { "source": "/aboutme",       "destination": "/about",    "permanent": true },
-    { "source": "/contact",       "destination": "/#contact", "permanent": true },
-    { "source": "/plans-pricing", "destination": "/coaching", "permanent": true },
-    { "source": "/general-9",     "destination": "/",         "permanent": true },
-
-    { "source": "/post/satisfythebeast", "destination": "/articles/satisfy-the-beast", "permanent": true },
-    { "source": "/post/:slug",               "destination": "/articles/:slug", "permanent": true },
-    { "source": "/podcast/episode/:id/:slug","destination": "/podcast/:slug",  "permanent": true },
-    { "source": "/articles/categories/:slug","destination": "/articles",  "permanent": true }
-  ],
-  "rewrites": [
-    { "source": "/config.yml", "destination": "/admin.config.yml" },
-    { "source": "/((?!assets/|api/|src/|@|node_modules|admin/)[^.]*)", "destination": "/index.html" }
-  ]
+    "redirects": [
+        {
+            "source": "/aboutme",
+            "destination": "/about",
+            "permanent": true
+        },
+        {
+            "source": "/contact",
+            "destination": "/#contact",
+            "permanent": true
+        },
+        {
+            "source": "/plans-pricing",
+            "destination": "/coaching",
+            "permanent": true
+        },
+        {
+            "source": "/general-9",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/blog",
+            "destination": "/articles",
+            "permanent": true
+        },
+        {
+            "source": "/post/satisfythebeast",
+            "destination": "/articles/satisfy-the-beast",
+            "permanent": true
+        },
+        {
+            "source": "/post/:slug",
+            "destination": "/articles/:slug",
+            "permanent": true
+        },
+        {
+            "source": "/podcast/episode/:id/:slug",
+            "destination": "/podcast/:slug",
+            "permanent": true
+        },
+        {
+            "source": "/articles/categories/:slug",
+            "destination": "/articles",
+            "permanent": true
+        }
+    ],
+    "rewrites": [
+        {
+            "source": "/config.yml",
+            "destination": "/admin.config.yml"
+        },
+        {
+            "source": "/((?!assets/|api/|src/|@|node_modules|admin/)[^.]*)",
+            "destination": "/index.html"
+        }
+    ]
 }
